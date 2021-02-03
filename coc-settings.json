@@ -1,0 +1,25 @@
+{
+        "coc.preferences.extensionUpdateCheck": "daily",
+        "coc.preferences.formatOnSaveFiletypes": [
+                "json"
+        ],
+        "suggest.noselect": true,
+        "suggest.enablePreselect": false,
+        "diagnostic.refreshOnInsertMode": false,
+        "diagnostic.refreshAfterSave": false,
+        "diagnostic.checkCurrentLine": true,
+        "diagnostic.virtualTextPrefix": ">>> ",
+        "diagnostic.virtualText": true,
+        "codeLens.enable": true,
+        "clangd.arguments": [
+                "--clang-tidy",
+                "--suggest-missing-includes",
+                "--header-insertion=iwyu"
+        ],
+        "go.goplsOptions": {
+                "completeUnimported": true,
+                "gofumpt": true
+        },
+        "texlab.path": "/bin/texlab",
+        "python.analysis.diagnosticMode": "workspace"
+}
