@@ -14,6 +14,7 @@ set undodir=~/.vim/undodir
 set autochdir
 set hidden
 set termguicolors
+set ambiwidth=double
 set softtabstop=-1
 set lazyredraw " Don't redraw when we don't have to
 set autochdir
@@ -34,6 +35,7 @@ set mousehide
 set wildmenu
 set encoding=utf-8
 set wrap "Wrap line
+set linebreak
 "外部文件改变自动读取
 set autoread
 au FocusGained,BufEnter * checktime

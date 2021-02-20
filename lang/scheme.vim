@@ -1,0 +1,1 @@
+imap <silent> <C-\> λ

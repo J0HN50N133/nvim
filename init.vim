@@ -13,4 +13,6 @@ source ~/.config/nvim/plugList.vim
 source ~/.config/nvim/plugconf.vim
 source ~/.config/nvim/keybindings.vim
 
-autocmd FileType go source ~/.config/nvim/mygo.vim
+autocmd FileType go source ~/.config/nvim/lang/go.vim
+autocmd FileType python source ~/.config/nvim/lang/python.vim
+autocmd FileType scheme source ~/.config/nvim/lang/scheme.vim

@@ -16,9 +16,9 @@ let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
 let g:gutentags_ctags_tagfile = '.tags'
 " 同时开启 ctags 和 gtags 支持：
 let g:gutentags_modules = []
-"if executable('ctags')
-	"let g:gutentags_modules += ['ctags']
-"endif
+if executable('ctags')
+	let g:gutentags_modules += ['ctags']
+endif
 if executable('gtags-cscope') && executable('gtags')
 	let g:gutentags_modules += ['gtags_cscope']
 endif
@@ -34,7 +34,7 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
 
 " 禁用 gutentags 自动加载 gtags 数据库的行为
-let g:gutentags_auto_add_gtags_cscope = 0
+let g:gutentags_auto_add_gtags_cscope = 1
 let g:gutentags_define_advanced_commands = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,11 +109,35 @@ let g:leetcode_hide_paid_only = 1
 "  \_/ |_|___/\__\__,_|
 "                      
 """""""""""""""""""""""""""
-"let g:vista_default_executive = 'coc'
+let g:vista_default_executive = 'coc'
 let g:vista_echo_cursor = 0
+let g:vista_executive_for = {
+                  \ 'scheme': 'ctags',
+                  \}
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista#renderer#enable_icon = 1
+let g:vista#renderer#icons = {
+\   "function": "\uf794",
+\   "variable": "\uf71b",
+\  }
+
 
 """""vimtex"""""
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method='zathura'
 set conceallevel=1
 let g:tex_conceal='abdmg'
+
+""""""""""vim-repl""""""""""
+"let g:repl_program = {
+      "\ 'python': 'ipython',
+      "\ 'lua': 'lua',
+      "\ 'default': 'zsh',
+      "\ }
+"let g:repl_cursor_down = 1
+"let g:repl_python_automerge = 1
+"let g:repl_ipython_version = '7'
+"let g:repl_output_copy_to_register = "t"
+"let g:repl_position=3
+"nnoremap <leader>repl :REPLToggle<Cr>
+"nnoremap <leader>e    :REPLSendSession<Cr>

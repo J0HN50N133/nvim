@@ -22,7 +22,9 @@ Plug 'https://hub.fastgit.org/roxma/nvim-yarp'
 Plug 'https://hub.fastgit.org/ervandew/supertab'
 Plug 'https://hub.fastgit.org/gcmt/wildfire.vim'
 Plug 'https://hub.fastgit.org/mg979/vim-visual-multi'
+"" python 
 Plug 'https://hub.fastgit.org/python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'https://hub.fastgit.org/kassio/neoterm'
 "Plug 'https://hub.fastgit.org/wincent/command-t'
 
 "highlight
