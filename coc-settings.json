@@ -1,7 +1,9 @@
 {
         "coc.preferences.extensionUpdateCheck": "daily",
         "coc.preferences.formatOnSaveFiletypes": [
-                "json"
+                "json",
+                "elm",
+                "go"
         ],
         "suggest.noselect": true,
         "suggest.enablePreselect": false,
@@ -20,5 +22,34 @@
                 "gofumpt": true
         },
         "texlab.path": "/bin/texlab",
-        "python.analysis.diagnosticMode": "workspace"
+        "python.analysis.diagnosticMode": "workspace",
+        "languageserver": {
+                "elmLS": {
+                        "command": "elm-language-server",
+                        "filetypes": [
+                                "elm"
+                        ],
+                        "rootPatterns": [
+                                "elm.json"
+                        ],
+                        "trace.server": "verbose",
+                        "initializationOptions": {
+                                "elmPath": "elm",
+                                "eleFormatPath": "elm-format",
+                                "elmTestPath": "elm-test",
+                                "disableElmLSDiagnostics": false,
+                                "skipInstallPackageConfirmation": false
+                        }
+                },
+                "rktLS": {
+                        "command": "racket-language-server",
+                        "filetypes": [
+                                "racket"
+                        ],
+                        "rootPatterns":[
+                                ".root"
+                        ],
+                        "trace.server": "verbose"
+                }
+        }
 }

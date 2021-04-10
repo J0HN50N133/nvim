@@ -1,3 +1,4 @@
+"""""""elm-vim"""""""
 """""""""""""""""""""""""""""""""""""""""""""""""
 "             _             _                   "
 "  __ _ _   _| |_ ___ _ __ | |_ __ _  __ _ ___  "
@@ -128,16 +129,7 @@ let g:vimtex_view_method='zathura'
 set conceallevel=1
 let g:tex_conceal='abdmg'
 
-""""""""""vim-repl""""""""""
-"let g:repl_program = {
-      "\ 'python': 'ipython',
-      "\ 'lua': 'lua',
-      "\ 'default': 'zsh',
-      "\ }
-"let g:repl_cursor_down = 1
-"let g:repl_python_automerge = 1
-"let g:repl_ipython_version = '7'
-"let g:repl_output_copy_to_register = "t"
-"let g:repl_position=3
-"nnoremap <leader>repl :REPLToggle<Cr>
-"nnoremap <leader>e    :REPLSendSession<Cr>
+""""""""""vim-slime""""""""""
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.2"}
+

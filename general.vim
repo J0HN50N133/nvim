@@ -29,7 +29,6 @@ set expandtab
 set smarttab
 set smartindent
 set autoindent
-filetype plugin indent on
 set mouse=a
 set mousehide
 set wildmenu
@@ -38,7 +37,6 @@ set wrap "Wrap line
 set linebreak
 "外部文件改变自动读取
 set autoread
-au FocusGained,BufEnter * checktime
 "wildmenu忽略中间文件
 set wildignore=*.o,*~
 set ruler
@@ -47,7 +45,14 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 set nocompatible
 set magic " Enable extended regexes
 set scrolloff=3 " Start scrolling three lines before horizontal border of window
-
+set clipboard=unnamedplus
+filetype plugin indent on
+au FocusGained,BufEnter * checktime
+if has("autocmd")
+ au BufReadPost *.rkt,*.rktl set filetype=racket
+ au filetype racket set lisp
+ au filetype racket set autoindent
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

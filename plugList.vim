@@ -7,9 +7,12 @@ Plug 'https://hub.fastgit.org/junegunn/vim-easy-align'
 Plug 'https://hub.fastgit.org/junegunn/goyo.vim',{'on':'Goyo'}
 Plug 'https://hub.fastgit.org/easymotion/vim-easymotion'
 Plug 'https://hub.fastgit.org/SirVer/ultisnips' | Plug 'https://hub.fastgit.org/honza/vim-snippets'
+
 Plug 'https://hub.fastgit.org/tpope/vim-surround'
 Plug 'https://hub.fastgit.org/tpope/vim-unimpaired'
 Plug 'https://hub.fastgit.org/tpope/vim-speeddating'
+Plug 'https://hub.fastgit.org/tpope/vim-repeat'
+
 Plug 'https://hub.fastgit.org/preservim/nerdtree'
 Plug 'https://hub.fastgit.org/itchyny/calendar.vim'
 Plug 'https://hub.fastgit.org/justinmk/vim-sneak'
@@ -24,8 +27,7 @@ Plug 'https://hub.fastgit.org/gcmt/wildfire.vim'
 Plug 'https://hub.fastgit.org/mg979/vim-visual-multi'
 "" python 
 Plug 'https://hub.fastgit.org/python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-Plug 'https://hub.fastgit.org/kassio/neoterm'
-"Plug 'https://hub.fastgit.org/wincent/command-t'
+Plug 'https://hub.fastgit.org/jpalardy/vim-slime'
 
 "highlight
 Plug 'https://hub.fastgit.org/sheerun/vim-polyglot'
@@ -37,6 +39,8 @@ Plug 'https://hub.fastgit.org/neoclide/coc.nvim',{'branch':'release'}
 Plug 'https://hub.fastgit.org/tpope/vim-markdown', {'for': 'markdown'}
 Plug 'https://hub.fastgit.org/suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'https://hub.fastgit.org/lervag/vimtex'
+
+Plug 'https://hub.fastgit.org/jmcantrell/vim-virtualenv'
 
 "" go
 Plug 'https://hub.fastgit.org/fatih/vim-go',{'for':'go'}
@@ -52,12 +56,15 @@ Plug 'https://hub.fastgit.org/vim-airline/vim-airline-themes'
 Plug 'https://hub.fastgit.org/itchyny/vim-cursorword'
 Plug 'https://hub.fastgit.org/frazrepo/vim-rainbow'
 Plug 'https://hub.fastgit.org/skywind3000/asyncrun.vim'
-"Plug 'https://hub.fastgit.org/dense-analysis/ale'
+Plug 'https://hub.fastgit.org/dense-analysis/ale'
 Plug 'https://hub.fastgit.org/theniceboy/vim-deus'
 
 Plug 'https://hub.fastgit.org/ianding1/leetcode.vim',{'on':['LeetCodeList','LeetCodeSignIn']}
 Plug 'https://hub.fastgit.org/liuchengxu/vista.vim'
-Plug 'https://hub.fastgit.org/yggdroot/indentLine', {'for':['go', 'c', 'cpp', 'java', 'sh', 'raket']}
+Plug 'https://hub.fastgit.org/yggdroot/indentLine', {'for':['go', 'c', 'cpp', 'java', 'sh', 'scheme']}
+
+""""elm""""
+
 call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

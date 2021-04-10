@@ -63,6 +63,10 @@ nmap <silent> <leader>ot <Plug>(coc-type-definition)
 nmap <silent> <leader>oi <Plug>(coc-implementation)
 nmap <silent> <leader>or <Plug>(coc-references)
 nmap <silent> <leader>on <Plug>(coc-rename)
+nmap <silent> <leader>op :call CocActionAsync('format')<CR>
+nmap <silent> <leader>of <Plug>(coc-fix-current)
+nmap <silent> <leader>oa <Plug>(coc-codeaction)
+nmap <silent> <leader>oh :call CocAction('doHover')<CR>
 " Search workspace symbols.
 nnoremap <silent><nowait> <space>ls  :<C-u>CocList -I symbols<cr>
 nnoremap <silent><nowait> <space>lf :CocList files<cr>
@@ -87,8 +91,16 @@ elseif &filetype == 'html'
   "silent! exec "!" google-chrome stable "%"
 elseif &filetype == 'go'
   :AsyncRun -mode=term -focus=0 go run %
-elseif &filetype == 'scheme'
+elseif &filetype == 'racket'
   :AsyncRun -mode=term -focuns=0 racket %
+elseif &filetype == 'tex'
+  :VimtexCompile
+elseif &filetype == 'elm'
+  :!elm make %
+  " special for database experiment
+elseif &filetype == 'sql'
+  :!scp % omm@192.168.122.250:/home/omm/script/tmp.sql
+  :AsyncRun -mode=term -forcus=1 ssh omm@192.168.122.250 runscript.sh /home/omm/script/tmp.sql
 endif
 endfunc
 
