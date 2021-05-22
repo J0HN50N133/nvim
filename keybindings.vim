@@ -98,9 +98,6 @@ elseif &filetype == 'tex'
 elseif &filetype == 'elm'
   :!elm make %
   " special for database experiment
-elseif &filetype == 'sql'
-  :!scp % omm@192.168.122.250:/home/omm/script/tmp.sql
-  :AsyncRun -mode=term -forcus=1 ssh omm@192.168.122.250 runscript.sh /home/omm/script/tmp.sql
 endif
 endfunc
 
@@ -138,14 +135,6 @@ nmap <Leader>jw <Plug>(easymotion-w)
 nmap <Leader>jb <Plug>(easymotion-b)
 nmap <Leader>je <Plug>(easymotion-e)
 
-
-""""""coc-calc""""""
-nmap <Leader>aa <Plug>(coc-calc-result-append)
-nmap <Leader>ar <Plug>(coc-calc-result-replace)
-vmap <Leader>aa <Plug>(coc-calc-result-append)
-vmap <Leader>ar <Plug>(coc-calc-result-replace)
-
-"""""coc-calc"""""
 nmap <Leader>li  <plug>(vimtex-info) 
 nmap <Leader>lt  <plug>(vimtex-toc-open) 
 nmap <Leader>lT  <plug>(vimtex-toc-toggle) 
@@ -162,19 +151,3 @@ nmap cse              <plug>(vimtex-env-change)
 nmap csc              <plug>(vimtex-cmd-change)
 nmap <F7>             <plug>(vimtex-cmd-create)
 nmap ]]               <plug>(vimtex-delim-close)
-
-inoremap <C-o> <C-r>=Ocr()<cr>
-function! Ocr()
-    let l:str = system('ocr')
-    " remove \n
-    let l:str = join(split(l:str), ' ')
-
-    let l:frgs = matchlist(l:str, '\(.*[\u4e00-\u9fa5]\+\) \([\u4e00-\u9fa5]\+.*\)')[1:2]
-    while l:frgs != []
-        let l:str = join(frgs, '')
-        " echo l:str
-        let l:frgs = matchlist(l:str, '\(.*[\u4e00-\u9fa5]\+\) \([\u4e00-\u9fa5]\+.*\)')[1:2]
-    endwhile
-
-    return l:str
-endfunction

@@ -14,12 +14,11 @@ Plug 'https://hub.fastgit.org/tpope/vim-speeddating'
 Plug 'https://hub.fastgit.org/tpope/vim-repeat'
 
 Plug 'https://hub.fastgit.org/preservim/nerdtree'
-Plug 'https://hub.fastgit.org/itchyny/calendar.vim'
 Plug 'https://hub.fastgit.org/justinmk/vim-sneak'
 Plug 'https://hub.fastgit.org/preservim/nerdcommenter'
 Plug 'https://hub.fastgit.org/ludovicchabant/vim-gutentags'
-"Plug 'https://hub.fastgit.org/skywind3000/gutentags_plus'
 Plug 'https://hub.fastgit.org/skywind3000/vim-preview'
+Plug 'https://hub.fastgit.org/skywind3000/vim-terminal-help'
 Plug 'https://hub.fastgit.org/jiangmiao/auto-pairs'
 Plug 'https://hub.fastgit.org/roxma/nvim-yarp'
 Plug 'https://hub.fastgit.org/ervandew/supertab'
@@ -31,7 +30,6 @@ Plug 'https://hub.fastgit.org/jpalardy/vim-slime'
 
 "highlight
 Plug 'https://hub.fastgit.org/sheerun/vim-polyglot'
-
 """"""""""""""""""Plug-For-language""""""""""""""""""""""
 "Auto complete
 Plug 'https://hub.fastgit.org/neoclide/coc.nvim',{'branch':'release'}
@@ -55,15 +53,20 @@ Plug 'https://hub.fastgit.org/vim-airline/vim-airline'
 Plug 'https://hub.fastgit.org/vim-airline/vim-airline-themes'
 Plug 'https://hub.fastgit.org/itchyny/vim-cursorword'
 Plug 'https://hub.fastgit.org/frazrepo/vim-rainbow'
+Plug 'https://hub.fastgit.org/morhetz/gruvbox'
+
+"" language tools"
 Plug 'https://hub.fastgit.org/skywind3000/asyncrun.vim'
 Plug 'https://hub.fastgit.org/dense-analysis/ale'
 Plug 'https://hub.fastgit.org/theniceboy/vim-deus'
-
 Plug 'https://hub.fastgit.org/ianding1/leetcode.vim',{'on':['LeetCodeList','LeetCodeSignIn']}
 Plug 'https://hub.fastgit.org/liuchengxu/vista.vim'
 Plug 'https://hub.fastgit.org/yggdroot/indentLine', {'for':['go', 'c', 'cpp', 'java', 'sh', 'scheme']}
+Plug 'https://hub.fastgit.org/matze/vim-move'
+"" Haskell"
+Plug 'https://hub.fastgit.org/neovimhaskell/haskell-vim',{'for':['haskell']}
 
-""""elm""""
+""""racket""""
 
 call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -91,6 +94,4 @@ let g:coc_global_extensions = [
             \"coc-translator",
             \"coc-vimlsp",
             \"coc-go",
-            \"coc-calc",
             \"coc-pyright"]
-"

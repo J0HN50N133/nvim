@@ -15,20 +15,20 @@ set autochdir
 set hidden
 set termguicolors
 set ambiwidth=double
-set softtabstop=-1
+set softtabstop=0
+set expandtab
+set smarttab
+set shiftwidth=4
+set smartindent
+set autoindent
+set ts=4
+autocmd FileType coffee,html,css,xml,yaml,json set sw=2 ts=2
 set lazyredraw " Don't redraw when we don't have to
 set autochdir
 set hidden
 set noshowmode " Don't show the current mode (airline.vim takes care of us)
 set termguicolors
-set softtabstop=-1
 set nostartofline " Don't reset cursor to start of line when moving around
-set shiftwidth=4
-set ts=4
-set expandtab
-set smarttab
-set smartindent
-set autoindent
 set mouse=a
 set mousehide
 set wildmenu
@@ -40,7 +40,7 @@ set autoread
 "wildmenu忽略中间文件
 set wildignore=*.o,*~
 set ruler
-set cursorline cursorcolumn
+"set cursorline cursorcolumn
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 set nocompatible
 set magic " Enable extended regexes
@@ -48,6 +48,7 @@ set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set clipboard=unnamedplus
 filetype plugin indent on
 au FocusGained,BufEnter * checktime
+
 if has("autocmd")
  au BufReadPost *.rkt,*.rktl set filetype=racket
  au filetype racket set lisp

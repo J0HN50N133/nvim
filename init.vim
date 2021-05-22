@@ -21,3 +21,4 @@ source ~/.config/nvim/keybindings.vim
 autocmd FileType go source ~/.config/nvim/lang/go.vim
 autocmd FileType python source ~/.config/nvim/lang/python.vim
 autocmd FileType racket source ~/.config/nvim/lang/racket.vim
+autocmd FileType haskell source ~/.config/nvim/lang/haskell.vim

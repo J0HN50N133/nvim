@@ -1,1 +1,1 @@
-/home/ljx/.config/nvim/colors/../plugged/vim-deus/colors/deus.vim
+/home/johnsonlee/.config/nvim/plugged/vim-deus/colors/deus.vim

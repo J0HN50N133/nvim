@@ -21,28 +21,11 @@
                 "completeUnimported": true,
                 "gofumpt": true
         },
-        "texlab.path": "/bin/texlab",
+        //"texlab.path": "/bin/texlab",
         "python.analysis.diagnosticMode": "workspace",
         "languageserver": {
-                "elmLS": {
-                        "command": "elm-language-server",
-                        "filetypes": [
-                                "elm"
-                        ],
-                        "rootPatterns": [
-                                "elm.json"
-                        ],
-                        "trace.server": "verbose",
-                        "initializationOptions": {
-                                "elmPath": "elm",
-                                "eleFormatPath": "elm-format",
-                                "elmTestPath": "elm-test",
-                                "disableElmLSDiagnostics": false,
-                                "skipInstallPackageConfirmation": false
-                        }
-                },
                 "rktLS": {
-                        "command": "racket-language-server",
+                        "command": "racket-langserver",
                         "filetypes": [
                                 "racket"
                         ],
@@ -50,6 +33,12 @@
                                 ".root"
                         ],
                         "trace.server": "verbose"
+                },
+                "haskell": {
+                        "command": "haskell-language-server-wrapper",
+                        "args": ["--lsp"],
+                        "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+                        "filetypes": ["haskell", "lhaskell"]
                 }
         }
 }
