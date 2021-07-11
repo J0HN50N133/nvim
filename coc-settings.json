@@ -2,8 +2,9 @@
         "coc.preferences.extensionUpdateCheck": "daily",
         "coc.preferences.formatOnSaveFiletypes": [
                 "json",
-                "elm",
-                "go"
+                "go",
+                "c",
+                "python"
         ],
         "suggest.noselect": true,
         "suggest.enablePreselect": false,
@@ -40,5 +41,12 @@
                         "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
                         "filetypes": ["haskell", "lhaskell"]
                 }
-        }
+        },
+        "coc.preferences.rootPatterns":[
+                ".git",
+                ".hg",
+                ".projections.json",
+                ".root"
+        ],
+        "python.pythonPath": "python3"
 }

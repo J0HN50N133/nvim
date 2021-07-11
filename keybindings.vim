@@ -95,8 +95,6 @@ elseif &filetype == 'racket'
   :AsyncRun -mode=term -focuns=0 racket %
 elseif &filetype == 'tex'
   :VimtexCompile
-elseif &filetype == 'elm'
-  :!elm make %
   " special for database experiment
 endif
 endfunc

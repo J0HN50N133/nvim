@@ -1,11 +1,8 @@
-"let g:repl_predefine_python = {
-      "\'numpy': 'import numpy as np',
-      "\'matplotlib':'from matplotlib import pyplot as plt'
-      "\}
-"" F8 make break point
-"autocmd FileType python nnoremap <F8> <Esc>:REPLDebugStopAtCurrentLine<Cr>
-"" F6 doesn't step into a function
-"autocmd FileType python nnoremap <F6> <Esc>:REPLDBN<Cr>
-"" F7 step into a function
-"autocmd FileType python nnoremap <F7> <Esc>:REPLDBS<Cr>
-
+let g:pymode = 1
+let g:pymode_rope = 1
+let g:pymode_rope_autoimport = 1
+let g:pymode_virtualenv = 1
+let g:pymode_rope_regenerate_on_write = 1
+"let g:pymode_rope_completion = 1
+"let g:pymode_rope_autoimport_import_after_complete = 1
+"let g:pymode_rope_completion_bind = '<C-i>'
