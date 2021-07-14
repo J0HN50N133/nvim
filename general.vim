@@ -15,13 +15,13 @@ set autochdir
 set hidden
 set termguicolors
 set ambiwidth=double
-set softtabstop=0
-set expandtab
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+set noexpandtab
 set smarttab
-set shiftwidth=4
 set smartindent
 set autoindent
-set ts=4
 autocmd FileType coffee,html,css,xml,yaml,json set sw=2 ts=2
 set lazyredraw " Don't redraw when we don't have to
 set autochdir

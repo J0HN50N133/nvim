@@ -35,7 +35,7 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
 
 " 禁用 gutentags 自动加载 gtags 数据库的行为
-let g:gutentags_auto_add_gtags_cscope = 1
+let g:gutentags_auto_add_gtags_cscope = 0
 let g:gutentags_define_advanced_commands = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -133,3 +133,5 @@ let g:tex_conceal='abdmg'
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.2"}
 
+"""""polyglot"""""
+let g:polyglot_disabled = ['sensible']
