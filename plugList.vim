@@ -70,6 +70,9 @@ Plug 'https://hub.fastgit.org/justinmk/vim-syntax-extra', {'for':['yacc', 'lex']
 "" Haskell"
 Plug 'https://hub.fastgit.org/neovimhaskell/haskell-vim',{'for':['haskell']}
 
+"" sml "
+Plug 'https://hub.fastgit.org/jez/vim-better-sml',{'for':['sml']}
+
 """"racket""""
 
 call plug#end()

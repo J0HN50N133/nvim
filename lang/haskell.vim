@@ -9,6 +9,8 @@ let g:cabal_indent_section = 2
 
 nmap <leader>hl :call LoadCurrentFile()<CR><a-=><a-=>
 nmap <leader>hr :call ReloadCurrentFile()<CR><a-=><a-=>
+nmap <leader>ht :call TestCurrentFile()<CR><a-=><a-=>
+
 nmap <Leader>hg :H ghci<CR>
 nmap <Leader>hc :H :! clear<CR>
 func! LoadCurrentFile()
@@ -19,5 +21,11 @@ endfunc
 func! ReloadCurrentFile()
 exec "w"
 let strcmd = join(["H :l", expand("%:t")]," ")
+:execute strcmd
+endfunc
+
+func! TestCurrentFile()
+exec "w"
+let strcmd = join(["H doctest", expand("%:t")]," ")
 :execute strcmd
 endfunc

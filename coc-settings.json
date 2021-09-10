@@ -3,7 +3,6 @@
         "coc.preferences.formatOnSaveFiletypes": [
                 "json",
                 "go",
-                "c",
                 "python"
         ],
         "suggest.noselect": true,
@@ -48,5 +47,7 @@
                 ".projections.json",
                 ".root"
         ],
-        "python.pythonPath": "python3"
+        "python.pythonPath": "python3",
+        "clangd.semanticHighlighting": true,
+        "clangd.serverCompletionRanking": true
 }
