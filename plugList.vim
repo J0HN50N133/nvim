@@ -6,72 +6,72 @@ call plug#begin('~/.config/nvim/plugged')
 "Plug 'https://hub.fastgit.org/dhruvasagar/vim-table-mode', {'on':'TableModeToggle'}
 
 """"""""""""""""Tool""""""""""""""""""""""""""""""
-Plug 'https://hub.fastgit.org/junegunn/vim-easy-align'
-Plug 'https://hub.fastgit.org/junegunn/goyo.vim',{'on':'Goyo'}
-Plug 'https://hub.fastgit.org/easymotion/vim-easymotion'
-Plug 'https://hub.fastgit.org/SirVer/ultisnips' | Plug 'https://hub.fastgit.org/honza/vim-snippets'
-Plug 'https://hub.fastgit.org/tpope/vim-surround'
-Plug 'https://hub.fastgit.org/tpope/vim-unimpaired'
-Plug 'https://hub.fastgit.org/tpope/vim-speeddating'
-Plug 'https://hub.fastgit.org/tpope/vim-repeat'
-Plug 'https://hub.fastgit.org/skywind3000/vim-preview'
-Plug 'https://hub.fastgit.org/skywind3000/vim-terminal-help'
-Plug 'https://hub.fastgit.org/skywind3000/asyncrun.vim'
-Plug 'https://hub.fastgit.org/preservim/nerdtree'
-Plug 'https://hub.fastgit.org/preservim/nerdcommenter'
-Plug 'https://hub.fastgit.org/justinmk/vim-sneak'
-Plug 'https://hub.fastgit.org/ludovicchabant/vim-gutentags'
-Plug 'https://hub.fastgit.org/jiangmiao/auto-pairs'
-Plug 'https://hub.fastgit.org/roxma/nvim-yarp'
-Plug 'https://hub.fastgit.org/gcmt/wildfire.vim'
-Plug 'https://hub.fastgit.org/mg979/vim-visual-multi'
-Plug 'https://hub.fastgit.org/ctrlpvim/ctrlp.vim'
-Plug 'https://hub.fastgit.org/matze/vim-move'
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/goyo.vim',{'on':'Goyo'}
+Plug 'easymotion/vim-easymotion'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-repeat'
+Plug 'skywind3000/vim-preview'
+Plug 'skywind3000/vim-terminal-help'
+Plug 'skywind3000/asyncrun.vim'
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
+Plug 'justinmk/vim-sneak'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'jiangmiao/auto-pairs'
+Plug 'roxma/nvim-yarp'
+Plug 'gcmt/wildfire.vim'
+Plug 'mg979/vim-visual-multi'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'matze/vim-move'
 
 "" python 
-Plug 'https://hub.fastgit.org/python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-Plug 'https://hub.fastgit.org/numirias/semshi', {'do': ':UpdateRemotePlugins'}
-Plug 'https://hub.fastgit.org/jpalardy/vim-slime'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'jpalardy/vim-slime'
 "highlight
-Plug 'https://hub.fastgit.org/sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 """"""""""""""""""Plug-For-language""""""""""""""""""""""
 "Auto complete
-Plug 'https://hub.fastgit.org/neoclide/coc.nvim',{'branch':'release'}
+Plug 'neoclide/coc.nvim',{'branch':'release'}
 
-Plug 'https://hub.fastgit.org/tpope/vim-markdown', {'for': 'markdown'}
-Plug 'https://hub.fastgit.org/suan/vim-instant-markdown', {'for': 'markdown'}
-Plug 'https://hub.fastgit.org/lervag/vimtex', {'for': 'tex'}
+Plug 'tpope/vim-markdown', {'for': 'markdown'}
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'lervag/vimtex', {'for': 'tex'}
 
-Plug 'https://hub.fastgit.org/jmcantrell/vim-virtualenv'
+Plug 'jmcantrell/vim-virtualenv'
 
 "" go
-Plug 'https://hub.fastgit.org/fatih/vim-go',{'for':'go'}
-Plug 'https://hub.fastgit.org/vim-jp/vim-go-extra',{'for':'go'}
-Plug 'https://hub.fastgit.org/nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
-Plug 'https://hub.fastgit.org/AndrewRadev/splitjoin.vim'
+Plug 'fatih/vim-go',{'for':'go'}
+Plug 'vim-jp/vim-go-extra',{'for':'go'}
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
+Plug 'AndrewRadev/splitjoin.vim'
 
 "" skirt
-Plug 'https://hub.fastgit.org/terryma/vim-smooth-scroll'
-Plug 'https://hub.fastgit.org/vim-airline/vim-airline'
-Plug 'https://hub.fastgit.org/vim-airline/vim-airline-themes'
-Plug 'https://hub.fastgit.org/itchyny/vim-cursorword'
-Plug 'https://hub.fastgit.org/frazrepo/vim-rainbow'
-Plug 'https://hub.fastgit.org/morhetz/gruvbox'
+Plug 'terryma/vim-smooth-scroll'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/vim-cursorword'
+Plug 'frazrepo/vim-rainbow'
+Plug 'morhetz/gruvbox'
 
 "" language tools"
-Plug 'https://hub.fastgit.org/dense-analysis/ale'
-Plug 'https://hub.fastgit.org/theniceboy/vim-deus'
-Plug 'https://hub.fastgit.org/ianding1/leetcode.vim',{'on':['LeetCodeList','LeetCodeSignIn']}
-Plug 'https://hub.fastgit.org/liuchengxu/vista.vim'
-Plug 'https://hub.fastgit.org/yggdroot/indentLine', {'for':['go', 'c', 'cpp', 'java', 'sh', 'scheme']}
+Plug 'dense-analysis/ale'
+Plug 'theniceboy/vim-deus'
+Plug 'ianding1/leetcode.vim',{'on':['LeetCodeList','LeetCodeSignIn']}
+Plug 'liuchengxu/vista.vim'
+Plug 'yggdroot/indentLine', {'for':['go', 'c', 'cpp', 'java', 'sh', 'scheme', 'haskell']}
 
 ""flex/bison"
-Plug 'https://hub.fastgit.org/justinmk/vim-syntax-extra', {'for':['yacc', 'lex']}
+Plug 'justinmk/vim-syntax-extra', {'for':['yacc', 'lex']}
 "" Haskell"
-Plug 'https://hub.fastgit.org/neovimhaskell/haskell-vim',{'for':['haskell']}
+Plug 'neovimhaskell/haskell-vim',{'for':['haskell']}
 
 "" sml "
-Plug 'https://hub.fastgit.org/jez/vim-better-sml',{'for':['sml']}
+Plug 'jez/vim-better-sml',{'for':['sml']}
 
 """"racket""""
 

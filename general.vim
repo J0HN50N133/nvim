@@ -9,6 +9,7 @@
 syntax enable
 syntax on
 set nu rnu
+set autowrite
 set undofile
 set undodir=~/.vim/undodir
 set autochdir
@@ -23,7 +24,7 @@ set smarttab
 set smartindent
 set autoindent
 autocmd FileType coffee,html,css,xml,yaml,json set sw=2 ts=2
-set lazyredraw " Don't redraw when we don't have to
+"set lazyredraw " Don't redraw when we don't have to
 set autochdir
 set hidden
 set noshowmode " Don't show the current mode (airline.vim takes care of us)

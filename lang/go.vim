@@ -34,12 +34,14 @@ let g:go_metalinter_autosave_enabled = ['golint', 'errcheck']
 let g:go_metalinter_deadline = "5s"
 
 set ts=8
-autocmd FileType go nmap <Leader>gb <Plug>(go-build)
-autocmd FileType go nmap <Leader>gt <Plug>(go-test)
-autocmd FileType go nmap <Leader>+ :cnext<cr>
-autocmd FileType go nmap <Leader>- :cprevious<cr>
-autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
-autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+nmap <leader>gr <Plug>(go-run)
+nmap <leader>gb <Plug>(go-build)
+nmap <leader>gt <Plug>(go-test)
+nmap <leader>+ :cnext<cr>
+nmap <leader>- :cprevious<cr>
+nmap <leader>c <Plug>(go-coverage-toggle)
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+"autocmd FileType go nmap <leader>r  <Plug>(go-run)
 "autocmd FileType go nmap gtj :CocCommand go.tags.add json<cr>
 "autocmd FileType go nmap gty :CocCommand go.tags.add yaml<cr>
 "autocmd FileType go nmap gtx :CocCommand go.tags.clear<cr>
