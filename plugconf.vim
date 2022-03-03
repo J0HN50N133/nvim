@@ -7,7 +7,8 @@
 " \__, |\__,_|\__\___|_| |_|\__\__,_|\__, |___/ "
 " |___/                              |___/      "
 """""""""""""""""""""""""""""""""""""""""""""""""
-let $GTAGSLABEL = 'native-pygments'
+let $GTAGSLABEL = 'native'
+"let $GTAGSLABEL = 'native-pygments'
 let $GTAGSCONF = '/usr/share/gtags/gtags.conf'
 let g:airline#extensions#tabline#enabled = 1
 " gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
@@ -114,13 +115,15 @@ let g:vista_default_executive = 'coc'
 let g:vista_echo_cursor = 0
 let g:vista_executive_for = {
                   \ 'scheme': 'ctags',
+                  \ 'c': 'ctags',
                   \}
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista#renderer#enable_icon = 1
-let g:vista#renderer#icons = {
-\   "function": "\uf794",
-\   "variable": "\uf71b",
-\  }
+"let g:vista_fzf_preview = ['bottom:30%']
+"let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista#renderer#enable_icon = 0
+"let g:vista#renderer#icons = {
+"\   "function": "\uf794",
+"\   "variable": "\uf71b",
+"\  }
 
 
 """""vimtex"""""
@@ -135,3 +138,8 @@ let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_
 
 """""polyglot"""""
 let g:polyglot_disabled = ['sensible']
+
+"""""signify"""""
+set updatetime=100
+let g:signify_vcs_list = ['git']
+let g:signify_sign_show_text = 1

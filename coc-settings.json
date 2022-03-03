@@ -51,7 +51,5 @@
                 ".projections.json",
                 ".root"
         ],
-        "python.pythonPath": "python3",
-        "clangd.semanticHighlighting": true,
-        "clangd.serverCompletionRanking": true
+        "python.pythonPath": "python3"
 }

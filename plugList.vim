@@ -21,19 +21,24 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'justinmk/vim-sneak'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'skywind3000/gutentags_plus'
 Plug 'jiangmiao/auto-pairs'
 Plug 'roxma/nvim-yarp'
 Plug 'gcmt/wildfire.vim'
 Plug 'mg979/vim-visual-multi'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'matze/vim-move'
-
+Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
+Plug 'junegunn/fzf.vim'
 "" python 
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'jpalardy/vim-slime'
 "highlight
 Plug 'sheerun/vim-polyglot'
+"""" vcs """"
+Plug 'mhinz/vim-signify'
+
 """"""""""""""""""Plug-For-language""""""""""""""""""""""
 "Auto complete
 Plug 'neoclide/coc.nvim',{'branch':'release'}
@@ -50,7 +55,10 @@ Plug 'vim-jp/vim-go-extra',{'for':'go'}
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
 Plug 'AndrewRadev/splitjoin.vim'
 
-"" skirt
+""" rust
+Plug 'rust-lang/rust.vim'
+
+""" skirt
 Plug 'terryma/vim-smooth-scroll'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

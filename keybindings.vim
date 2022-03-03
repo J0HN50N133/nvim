@@ -103,6 +103,8 @@ elseif &filetype == 'tex'
   " special for database experiment
 elseif &filetype == 'haskell'
   :AsyncRun -mode=term -focus=0 runghc -Wall %
+elseif &filetype == 'rust'
+  :RustRun
 endif
 endfunc
 
@@ -115,9 +117,9 @@ endfunc
 "                      "
 """"""""""""""""""""""""
 
-nmap <silent><Leader>; /<++><CR>:nohlsearch<CR>ca<
 nmap <F2> :Vista!!<CR>
-
+nnoremap <silent><M-\|> :Tags<CR>
+nnoremap <silent><M-\> :Vista finder<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                      _   _             
 "  ___  __ _ ___ _   _ _ __ ___   ___ | |_(_) ___  _ __  
