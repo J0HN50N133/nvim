@@ -3,7 +3,8 @@
         "coc.preferences.formatOnSaveFiletypes": [
                 "json",
                 "go",
-                "python"
+                "python",
+                "ocaml"
         ],
         "suggest.noselect": true,
         "suggest.enablePreselect": false,
@@ -12,11 +13,6 @@
         "diagnostic.virtualTextPrefix": ">>> ",
         "diagnostic.virtualText": true,
         "codeLens.enable": true,
-        "clangd.arguments": [
-                "--clang-tidy",
-                "--suggest-missing-includes",
-                "--header-insertion=iwyu"
-        ],
         "go.goplsPath": "gopls",
         "go.goplsOptions": {
                 "completeUnimported": true,

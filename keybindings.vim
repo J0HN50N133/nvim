@@ -66,11 +66,19 @@ nmap <silent> <leader>oN <Plug>(coc-refactor)
 nmap <silent> <leader>op :call CocActionAsync('format')<CR>
 nmap <silent> <leader>of <Plug>(coc-fix-current)
 "" actiono for file
+nmap <silent> <M-CR> <Plug>(coc-codeaction-cursor)
 nmap <silent> <leader>oaf <Plug>(coc-codeaction)
 nmap <silent> <leader>oal <Plug>(coc-codeaction-line)
 nmap <silent> <leader>oac <Plug>(coc-codeaction-cursor)
 nmap <silent> <leader>oC <Plug>(coc-codelens-action)
 nmap <silent> <leader>oh :call CocAction('doHover')<CR>
+vmap <leader>p  <Plug>(coc-format-selected)
+nmap <leader>p  <Plug>(coc-format)
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+
 " Search workspace symbols.
 nnoremap <silent><nowait> <space>ls  :<C-u>CocList -I symbols<cr>
 nnoremap <silent><nowait> <space>lf :CocList files<cr>
