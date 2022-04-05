@@ -6,7 +6,6 @@
 " \__, |\___|_| |_|\___|_|  \__,_|_| "
 " |___/                              "
 """"""""""""""""""""""""""""""""""""""
-syntax enable
 syntax on
 set nu rnu
 set autowrite
@@ -22,7 +21,7 @@ set expandtab
 set smarttab
 set smartindent
 set autoindent
-autocmd FileType coffee,html,css,xml,yaml,json set sw=2 ts=2
+autocmd FileType html,css,xml,yaml,json set sw=2 ts=2
 "set lazyredraw " Don't redraw when we don't have to
 set autochdir
 set hidden
@@ -91,9 +90,9 @@ endfunction
 
 set ttimeoutlen=150
 "退出插入模式
-autocmd InsertLeave * call Fcitx2en()
+"autocmd InsertLeave * call Fcitx2en()
 "进入插入模式
-autocmd InsertEnter * call Fcitx2zh()
+"autocmd InsertEnter * call Fcitx2zh()
 
 "##### auto fcitx end ######
 "
@@ -105,4 +104,3 @@ function! s:get_visual_selection()
    let lines[0] = lines[0][col1 - 1:]
    return join(lines, "\n")
 endfunction
-

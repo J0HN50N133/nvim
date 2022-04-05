@@ -48,7 +48,7 @@
                 },
                 "ocaml": {
                         "command": "ocamllsp",
-                        "filetypes": ["ocaml"]
+                        "filetypes": ["ocaml", "dune"]
                 }
         },
         "coc.preferences.rootPatterns":[
