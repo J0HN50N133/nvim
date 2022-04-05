@@ -17,9 +17,15 @@
                 "--suggest-missing-includes",
                 "--header-insertion=iwyu"
         ],
+        "go.goplsPath": "gopls",
         "go.goplsOptions": {
                 "completeUnimported": true,
-                "gofumpt": true
+                "gofumpt": true,
+                "codelenses": {
+                        "upgrade_dependency": true
+                },
+                "usePlaceholders": true,
+                "semanticTokens": true
         },
         //"texlab.path": "/bin/texlab",
         "python.analysis.diagnosticMode": "workspace",

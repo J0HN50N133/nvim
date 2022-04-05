@@ -69,8 +69,19 @@ let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
 let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
 let g:ale_c_cppcheck_options = ''
 let g:ale_cpp_cppcheck_options = ''
-let g:ale_sign_error = "\ue009\ue009"
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
 let g:asyncrun_open = 8
+let g:ale_lint_on_save                = 1
+let g:ale_fix_on_save                 = 1
+let g:ale_linters = {
+\ 'ocaml': ['ocamllsp'],
+\}
+let g:ale_fixers = {
+\   'ocaml':      ['ocamlformat'],
+\   '*':          ['remove_trailing_lines', 'trim_whitespace'],
+\}
+
 hi! clear SpellBad
 hi! clear SpellCap
 hi! clear SpellRare
@@ -79,23 +90,23 @@ hi! SpellCap gui=undercurl guisp=blue
 hi! SpellRare gui=undercurl guisp=magenta
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                      _   _             
-"  ___  __ _ ___ _   _ _ __ ___   ___ | |_(_) ___  _ __  
-" / _ \/ _` / __| | | | '_ ` _ \ / _ \| __| |/ _ \| '_ \ 
+"                                      _   _
+"  ___  __ _ ___ _   _ _ __ ___   ___ | |_(_) ___  _ __
+" / _ \/ _` / __| | | | '_ ` _ \ / _ \| __| |/ _ \| '_ \
 "|  __/ (_| \__ \ |_| | | | | | | (_) | |_| | (_) | | | |
 " \___|\__,_|___/\__, |_| |_| |_|\___/ \__|_|\___/|_| |_|
-"                |___/                                   
+"                |___/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1
 
 """"""""""""""""""""""""""""""""""""""
-" _           _                _      
-"| | ___  ___| |_ ___ ___   __| | ___ 
+" _           _                _
+"| | ___  ___| |_ ___ ___   __| | ___
 "| |/ _ \/ _ \ __/ __/ _ \ / _` |/ _ \
 "| |  __/  __/ || (_| (_) | (_| |  __/
 "|_|\___|\___|\__\___\___/ \__,_|\___|
-"                                     
+"
 """"""""""""""""""""""""""""""""""""""
 
 let g:leetcode_browser = 'firefox'
@@ -104,12 +115,12 @@ let g:leetcode_solution_filetype = 'golang'
 let g:leetcode_hide_paid_only = 1
 
 """""""""""""""""""""""""""
-"       _     _        
-"__   _(_)___| |_ __ _ 
+"       _     _
+"__   _(_)___| |_ __ _
 "\ \ / / / __| __/ _` |
 " \ V /| \__ \ || (_| |
 "  \_/ |_|___/\__\__,_|
-"                      
+"
 """""""""""""""""""""""""""
 let g:vista_default_executive = 'coc'
 let g:vista_echo_cursor = 0

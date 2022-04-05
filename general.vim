@@ -14,7 +14,6 @@ set undofile
 set undodir=~/.vim/undodir
 set autochdir
 set hidden
-set termguicolors
 set ambiwidth=double
 set tabstop=8
 set softtabstop=8
@@ -41,7 +40,7 @@ set autoread
 "wildmenu忽略中间文件
 set wildignore=*.o,*~
 set ruler
-"set cursorline cursorcolumn
+set cursorline cursorcolumn
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 set nocompatible
 set magic " Enable extended regexes

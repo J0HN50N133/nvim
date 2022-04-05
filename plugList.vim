@@ -74,7 +74,7 @@ Plug 'liuchengxu/vista.vim'
 Plug 'yggdroot/indentLine', {'for':['go', 'c', 'cpp', 'java', 'sh', 'scheme', 'haskell']}
 
 ""flex/bison"
-Plug 'justinmk/vim-syntax-extra', {'for':['yacc', 'lex']}
+"Plug 'justinmk/vim-syntax-extra', {'for':['yacc', 'lex']}
 "" Haskell"
 Plug 'neovimhaskell/haskell-vim',{'for':['haskell']}
 

@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/johnsonlee/SRC/Compiler/PL0/src'
 let g:netrw_dirhist_2='/home/ljx/SourceCode/go-pl/ch2/converse/converter'
 let g:netrw_dirhist_1='/home/ljx/SourceCode/go-pl/ch1/server4/lissajous'

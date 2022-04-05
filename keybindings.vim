@@ -14,15 +14,14 @@ nmap W :w<CR>
 nmap <silent> w <Plug>(coc-ci-w)
 nmap <silent> b <Plug>(coc-ci-b)
 noremap Q :bdelete<CR>
-noremap gt :bn<CR> 
+noremap gt :bn<CR>
 noremap gT :bp<CR>
-noremap gP :b#<CR> 
+noremap gP :b#<CR>
 noremap <up> <c-w>+
 noremap <down> <c-w>-
 noremap <left> <c-w><
 noremap <right> <c-w>>
 noremap <F3> :NERDTreeToggle<CR>
-
 map <BS> :nohl<CR>
 map f <Plug>Sneak_s
 map F <Plug>Sneak_S
@@ -84,27 +83,26 @@ set splitbelow
 if &filetype == 'c'
   :AsyncRun gcc % -o %<&& time ./%<
 elseif &filetype == 'cpp'
-  :AsyncRun -mode=term -focus=0 g++ -O3 "%" -Wall -o "%<" -lpthread && time ./"%<"
+  :AsyncRun g++ -O3 "%" -Wall -o "%<" -lpthread && time ./"%<"
 elseif &filetype == 'java'
-  :AsyncRun -mode=term -focus=0 javac "%" && time java "%<"
+  :AsyncRun javac "%" && time java "%<"
 elseif &filetype == 'sh'
   :AsyncRun time bash "%"
 elseif &filetype == 'python'
-  :AsyncRun -mode=term -focus=0 python3 %
-elseif &filetype == 'html'
-  :AsyncRun -mode=bang google-chrome-stable %
-  "silent! exec "!" google-chrome stable "%"
+  :AsyncRun python3 %
 elseif &filetype == 'go'
-  :AsyncRun -mode=term -focus=0 go run %
+  :AsyncRun go run %
 elseif &filetype == 'racket'
-  :AsyncRun -mode=term -focus=0 racket %
+  :AsyncRun racket %
 elseif &filetype == 'tex'
   :VimtexCompile
   " special for database experiment
 elseif &filetype == 'haskell'
-  :AsyncRun -mode=term -focus=0 runghc -Wall %
+  :AsyncRun runghc -Wall %
 elseif &filetype == 'rust'
   :RustRun
+elseif &filetype == 'ocaml'
+  :AsyncRun ocaml %
 endif
 endfunc
 
@@ -121,12 +119,12 @@ nmap <F2> :Vista!!<CR>
 nnoremap <silent><M-\|> :Tags<CR>
 nnoremap <silent><M-\> :Vista finder<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                      _   _             
-"  ___  __ _ ___ _   _ _ __ ___   ___ | |_(_) ___  _ __  
-" / _ \/ _` / __| | | | '_ ` _ \ / _ \| __| |/ _ \| '_ \ 
+"                                      _   _
+"  ___  __ _ ___ _   _ _ __ ___   ___ | |_(_) ___  _ __
+" / _ \/ _` / __| | | | '_ ` _ \ / _ \| __| |/ _ \| '_ \
 "|  __/ (_| \__ \ |_| | | | | | | (_) | |_| | (_) | | | |
 " \___|\__,_|___/\__, |_| |_| |_|\___/ \__|_|\___/|_| |_|
-"                |___/                                   
+"                |___/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1
@@ -142,19 +140,19 @@ nmap <Leader>jw <Plug>(easymotion-w)
 nmap <Leader>jb <Plug>(easymotion-b)
 nmap <Leader>je <Plug>(easymotion-e)
 
-nmap <Leader>li  <plug>(vimtex-info) 
-nmap <Leader>lt  <plug>(vimtex-toc-open) 
-nmap <Leader>lT  <plug>(vimtex-toc-toggle) 
-nmap <Leader>lv  <plug>(vimtex-view) 
-nmap <Leader>ll  <plug>(vimtex-compile) 
-nmap <Leader>lo  <plug>(vimtex-compile-output) 
-nmap <Leader>lg  <plug>(vimtex-status) 
-nmap <Leader>lG  <plug>(vimtex-status-all) 
-nmap <Leader>lc  <plug>(vimtex-clean) 
-nmap <Leader>lC  <plug>(vimtex-clean-full) 
-nmap dse              <plug>(vimtex-env-delete) 
-nmap dsc              <plug>(vimtex-cmd-delete) 
-nmap cse              <plug>(vimtex-env-change) 
+nmap <Leader>li  <plug>(vimtex-info)
+nmap <Leader>lt  <plug>(vimtex-toc-open)
+nmap <Leader>lT  <plug>(vimtex-toc-toggle)
+nmap <Leader>lv  <plug>(vimtex-view)
+nmap <Leader>ll  <plug>(vimtex-compile)
+nmap <Leader>lo  <plug>(vimtex-compile-output)
+nmap <Leader>lg  <plug>(vimtex-status)
+nmap <Leader>lG  <plug>(vimtex-status-all)
+nmap <Leader>lc  <plug>(vimtex-clean)
+nmap <Leader>lC  <plug>(vimtex-clean-full)
+nmap dse              <plug>(vimtex-env-delete)
+nmap dsc              <plug>(vimtex-cmd-delete)
+nmap cse              <plug>(vimtex-env-change)
 nmap csc              <plug>(vimtex-cmd-change)
 nmap <F7>             <plug>(vimtex-cmd-create)
 nmap ]]               <plug>(vimtex-delim-close)
