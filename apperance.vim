@@ -1,14 +1,35 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Appearance
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 双字宽显示特殊字符
-set ambiwidth=double
-let g:airline_theme='deus'
-colorscheme deus
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-let g:deus_termcolors=256
-set background=dark    " Setting dark mode
+set ambiwidth=single
+let g:airline_theme='oceanicnext'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_skip_empty_sections = 1
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.colnr = ' col:'
+let g:airline_symbols.linenr = ' line:'
+let g:airline_symbols.maxlinenr = ' '
+let g:airline_symbols.dirty='⚡'
+if(has("termguicolors"))
+	set termguicolors
+endif
+colorscheme OceanicNext
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+"set background=dark    " Setting dark mode
 let g:rainbow_active = 1
 let g:rainbow_conf = {
 	\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],

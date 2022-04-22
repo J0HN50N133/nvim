@@ -23,7 +23,6 @@
                 "usePlaceholders": true,
                 "semanticTokens": true
         },
-        //"texlab.path": "/bin/texlab",
         "python.analysis.diagnosticMode": "workspace",
         "languageserver": {
                 "rktLS": {
@@ -31,23 +30,37 @@
                         "filetypes": [
                                 "racket"
                         ],
-                        "rootPatterns":[
+                        "rootPatterns": [
                                 ".root"
                         ],
                         "trace.server": "verbose"
                 },
                 "haskell": {
                         "command": "haskell-language-server-wrapper",
-                        "args": ["--lsp"],
-                        "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
-                        "filetypes": ["haskell", "lhaskell"]
+                        "args": [
+                                "--lsp"
+                        ],
+                        "rootPatterns": [
+                                "*.cabal",
+                                "stack.yaml",
+                                "cabal.project",
+                                "package.yaml",
+                                "hie.yaml"
+                        ],
+                        "filetypes": [
+                                "haskell",
+                                "lhaskell"
+                        ]
                 },
                 "ocaml": {
                         "command": "ocamllsp",
-                        "filetypes": ["ocaml", "dune"]
+                        "filetypes": [
+                                "ocaml",
+                                "dune"
+                        ]
                 }
         },
-        "coc.preferences.rootPatterns":[
+        "coc.preferences.rootPatterns": [
                 ".git",
                 ".hg",
                 ".projections.json",

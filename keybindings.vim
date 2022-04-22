@@ -17,10 +17,10 @@ noremap Q :bdelete<CR>
 noremap gt :bn<CR>
 noremap gT :bp<CR>
 noremap gP :b#<CR>
-noremap <up> <c-w>+
-noremap <down> <c-w>-
-noremap <left> <c-w><
-noremap <right> <c-w>>
+noremap <c-up> <c-w>+
+noremap <c-down> <c-w>-
+noremap <c-left> <c-w><
+noremap <c-right> <c-w>>
 noremap <F3> :NERDTreeToggle<CR>
 map <BS> :nohl<CR>
 map f <Plug>Sneak_s
@@ -58,6 +58,7 @@ vmap <Leader>tr <Plug>(coc-translator-rv)
 nmap <silent> <leader>- <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>+ <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>od <Plug>(coc-definition)
+nmap <silent> <M-]> <Plug>(coc-definition)
 nmap <silent> <leader>ot <Plug>(coc-type-definition)
 nmap <silent> <leader>oi <Plug>(coc-implementation)
 nmap <silent> <leader>or <Plug>(coc-references)
@@ -72,6 +73,7 @@ nmap <silent> <leader>oal <Plug>(coc-codeaction-line)
 nmap <silent> <leader>oac <Plug>(coc-codeaction-cursor)
 nmap <silent> <leader>oC <Plug>(coc-codelens-action)
 nmap <silent> <leader>oh :call CocAction('doHover')<CR>
+nmap <silent> <leader>op :call CocAction('definitionHover', 'preview')<CR>
 vmap <leader>p  <Plug>(coc-format-selected)
 nmap <leader>p  <Plug>(coc-format)
 xmap if <Plug>(coc-funcobj-i)
@@ -126,6 +128,7 @@ endfunc
 nmap <F2> :Vista!!<CR>
 nnoremap <silent><M-\|> :Tags<CR>
 nnoremap <silent><M-\> :Vista finder<CR>
+"nnoremap <C-/> <plug>NERDCommenterToggle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                      _   _
 "  ___  __ _ ___ _   _ _ __ ___   ___ | |_(_) ___  _ __

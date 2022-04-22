@@ -12,6 +12,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+Plug 'gelguy/wilder.nvim'
 Plug 'skywind3000/vim-preview'
 Plug 'skywind3000/vim-terminal-help'
 Plug 'skywind3000/asyncrun.vim'
@@ -63,13 +65,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'itchyny/vim-cursorword'
 Plug 'luochen1990/rainbow'
 Plug 'morhetz/gruvbox'
-
-"" language tools"
-Plug 'dense-analysis/ale'
-Plug 'theniceboy/vim-deus'
-Plug 'ianding1/leetcode.vim',{'on':['LeetCodeList','LeetCodeSignIn']}
+Plug 'mhartington/oceanic-next'
+Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vista.vim'
-Plug 'yggdroot/indentLine', {'for':['go', 'c', 'cpp', 'java', 'sh', 'scheme', 'haskell']}
+Plug 'yggdroot/indentLine'
 
 ""flex/bison"
 Plug 'justinmk/vim-syntax-extra', {'for':['yacc', 'lex']}
@@ -106,4 +105,5 @@ let g:coc_global_extensions = [
             \"coc-translator",
             \"coc-vimlsp",
             \"coc-go",
-            \"coc-pyright"]
+            \"coc-pyright",
+						\"coc-tsserver"]

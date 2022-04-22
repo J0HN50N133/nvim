@@ -26,12 +26,12 @@ autocmd FileType html,css,xml,yaml,json set sw=2 ts=2
 set autochdir
 set hidden
 set noshowmode " Don't show the current mode (airline.vim takes care of us)
-set termguicolors
 set nostartofline " Don't reset cursor to start of line when moving around
 set mouse=a
 set mousehide
 set wildmenu
 set encoding=utf-8
+set textwidth=80
 set wrap "Wrap line
 set linebreak
 "外部文件改变自动读取
@@ -68,39 +68,4 @@ endif
 
 nnoremap <silent><Leader><Leader> /<++><CR>:nohlsearch<CR>ca<
 
-
-""""""" auto fcitx """""""
-
-let g:input_toggle = 1
-function! Fcitx2en()
-   let s:input_status = system("fcitx5-remote")
-   if s:input_status == 2
-      let g:input_toggle = 1
-      let l:a = system("fcitx5-remote -c")
-   endif
-endfunction
-
-function! Fcitx2zh()
-   let s:input_status = system("fcitx5-remote")
-   if s:input_status != 2 && g:input_toggle == 1
-      let l:a = system("fcitx5-remote -o")
-      let g:input_toggle = 0
-   endif
-endfunction
-
 set ttimeoutlen=150
-"退出插入模式
-"autocmd InsertLeave * call Fcitx2en()
-"进入插入模式
-"autocmd InsertEnter * call Fcitx2zh()
-
-"##### auto fcitx end ######
-"
-function! s:get_visual_selection()
-   let [lnum1, col1] = getpos("<")[1:2]
-   let [lnum2, col2] = getpos(">")[1:2]
-   let lines = getline(lnum1, lnum2)
-   let line[-1] = line[-1][:col2 - (&selection == 'inclusive'?1:2)]
-   let lines[0] = lines[0][col1 - 1:]
-   return join(lines, "\n")
-endfunction
