@@ -66,6 +66,8 @@ Plug 'itchyny/vim-cursorword'
 Plug 'luochen1990/rainbow'
 Plug 'morhetz/gruvbox'
 Plug 'mhartington/oceanic-next'
+Plug 'marko-cerovac/material.nvim'
+Plug 'sainnhe/sonokai'
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vista.vim'
 Plug 'yggdroot/indentLine'
@@ -77,6 +79,8 @@ Plug 'neovimhaskell/haskell-vim',{'for':['haskell']}
 
 "" sml "
 Plug 'jez/vim-better-sml',{'for':['sml']}
+"" rescipt "
+Plug 'rescript-lang/vim-rescript'
 
 """"racket""""
 
@@ -106,4 +110,4 @@ let g:coc_global_extensions = [
             \"coc-vimlsp",
             \"coc-go",
             \"coc-pyright",
-						\"coc-tsserver"]
+            \"coc-tsserver"]

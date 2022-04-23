@@ -58,6 +58,19 @@
                                 "ocaml",
                                 "dune"
                         ]
+                },
+                "rescript": {
+                        "enable": true,
+                        "module": "~/.config/nvim/plugged/vim-rescript/server/out/server.js",
+                        "args": [
+                                "--node-ipc"
+                        ],
+                        "filetypes": [
+                                "rescript"
+                        ],
+                        "rootPatterns": [
+                                "bsconfig.json"
+                        ]
                 }
         },
         "coc.preferences.rootPatterns": [

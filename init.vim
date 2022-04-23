@@ -11,7 +11,7 @@ source ~/.config/nvim/plugList.vim
 source ~/.config/nvim/plugconf.vim
 source ~/.config/nvim/apperance.vim
 source ~/.config/nvim/keybindings.vim
-
+luafile ~/.config/nvim/treesitter.lua
 autocmd FileType go source ~/.config/nvim/lang/go.vim
 autocmd FileType python source ~/.config/nvim/lang/python.vim
 autocmd FileType racket source ~/.config/nvim/lang/racket.vim
