@@ -4,7 +4,8 @@
                 "json",
                 "go",
                 "python",
-                "ocaml"
+                "ocaml",
+                "rescript"
         ],
         "suggest.noselect": true,
         "suggest.enablePreselect": false,

@@ -106,3 +106,4 @@ let g:signify_sign_show_text = 1
 
 """"""auto pair""""""
 au FileType ocaml let b:AutoPairs = {'(':')', '[':']', '{':'}','"':'"', "`":"`"}
+au FileType rescript let b:AutoPairs = {'(':')', '[':']', '{':'}','"':'"', "`":"`"}

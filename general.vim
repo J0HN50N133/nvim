@@ -23,7 +23,6 @@ set smartindent
 set autoindent
 autocmd FileType html,css,xml,yaml,json set sw=2 ts=2
 "set lazyredraw " Don't redraw when we don't have to
-set autochdir
 set hidden
 set noshowmode " Don't show the current mode (airline.vim takes care of us)
 set nostartofline " Don't reset cursor to start of line when moving around
@@ -31,9 +30,8 @@ set mouse=a
 set mousehide
 set wildmenu
 set encoding=utf-8
-set textwidth=80
+set colorcolumn=80
 set wrap "Wrap line
-set linebreak
 "外部文件改变自动读取
 set autoread
 "wildmenu忽略中间文件
