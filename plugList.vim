@@ -110,4 +110,5 @@ let g:coc_global_extensions = [
             \"coc-vimlsp",
             \"coc-go",
             \"coc-pyright",
-            \"coc-tsserver"]
+            \"coc-tsserver",
+            \"coc-git"]

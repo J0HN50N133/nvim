@@ -1,10 +1,17 @@
 """"""""""""""wilder""""""""""""""
+let s:scale = ['#f4468f', '#fd4a85', '#ff507a', '#ff566f', '#ff5e63',
+      \ '#ff6658', '#ff704e', '#ff7a45', '#ff843d', '#ff9036',
+      \ '#f89b31', '#efa72f', '#e6b32e', '#dcbe30', '#d2c934',
+      \ '#c8d43a', '#bfde43', '#b6e84e', '#aff05b']
+let s:gradient = map(s:scale, {i, fg -> wilder#make_hl(
+      \ 'WilderGradient' . i, 'Pmenu', [{}, {}, {'foreground': fg}]
+      \ )})
 call wilder#setup({'modes': [':', '/', '?']})
 call wilder#set_option('pipeline', [
       \   wilder#branch(
       \     wilder#cmdline_pipeline({
       \       'language': 'python',
-      \       'fuzzy': 1,
+      \       'fuzzy': 2,
       \     }),
       \     wilder#python_search_pipeline({
       \       'pattern': wilder#python_fuzzy_pattern(),
@@ -14,14 +21,18 @@ call wilder#set_option('pipeline', [
       \   ),
       \ ])
 call wilder#set_option('renderer', wilder#popupmenu_renderer(wilder#popupmenu_palette_theme({
-      \ 'border': 'rounded',
+      \ 'border': 'double',
       \ 'max_height': '75%',
       \ 'min_height': 0,
       \ 'prompt_position': 'top',
       \ 'reverse': 0,
       \ 'pumblend':20,
+      \ 'highlighter': wilder#basic_highlighter(),
       \ 'left': [
       \   ' ', wilder#popupmenu_devicons(),
+      \ ],
+      \ 'right': [
+      \         ' ', wilder#popupmenu_scrollbar(),
       \ ],
       \ })))
 """""""""""""""""""""""gutentags""""""""""""""""""""""""""

@@ -80,5 +80,6 @@
                 ".projections.json",
                 ".root"
         ],
-        "python.pythonPath": "python3"
+        "python.pythonPath": "python3",
+        "git.enableGutters": true
 }
