@@ -13,6 +13,8 @@ set undofile
 set undodir=~/.vim/undodir
 set autochdir
 set hidden
+set nobackup
+set nowritebackup
 set ambiwidth=double
 set tabstop=8
 set softtabstop=8
@@ -23,11 +25,12 @@ set smartindent
 set autoindent
 autocmd FileType html,css,xml,yaml,json set sw=2 ts=2
 "set lazyredraw " Don't redraw when we don't have to
-set hidden
 set noshowmode " Don't show the current mode (airline.vim takes care of us)
 set nostartofline " Don't reset cursor to start of line when moving around
 set mouse=a
 set mousehide
+" merge the signcolumn and the number column
+set signcolumn=number
 set wildmenu
 set encoding=utf-8
 set colorcolumn=80

@@ -44,6 +44,31 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 " \____\___/ \___|"
 """""""""""""""""""
 
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 " coc-translator
 " popup
 nmap <Leader>tt <Plug>(coc-translator-p)
@@ -57,6 +82,7 @@ vmap <Leader>tr <Plug>(coc-translator-rv)
 
 nmap <silent> <leader>- <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>+ <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>oo :CocOutline<CR>
 nmap <silent> <leader>od <Plug>(coc-definition)
 nmap <silent> <M-]> <Plug>(coc-definition)
 nmap <silent> <leader>ot <Plug>(coc-type-definition)
@@ -96,10 +122,22 @@ xmap ig <Plug>(coc-git-chunk-inner)
 omap ag <Plug>(coc-git-chunk-outer)
 xmap ag <Plug>(coc-git-chunk-outer)
 
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
 " Search workspace symbols.
 nnoremap <silent><nowait> <space>ls  :<C-u>CocList -I symbols<cr>
 nnoremap <silent><nowait> <space>lf :CocList files<cr>
-
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
 "" compile and run
 noremap <leader>r :call CompileRun()<CR>
 func! CompileRun()

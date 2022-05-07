@@ -118,3 +118,13 @@ let g:signify_sign_show_text = 1
 """"""auto pair""""""
 au FileType ocaml let b:AutoPairs = {'(':')', '[':']', '{':'}','"':'"', "`":"`"}
 au FileType rescript let b:AutoPairs = {'(':')', '[':']', '{':'}','"':'"', "`":"`"}
+
+""""""coc""""""
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocActionAsync('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
