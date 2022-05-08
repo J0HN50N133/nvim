@@ -221,6 +221,7 @@ nmap csc              <plug>(vimtex-cmd-change)
 nmap <F7>             <plug>(vimtex-cmd-create)
 nmap ]]               <plug>(vimtex-delim-close)
 
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 augroup vimbettersml
   au!

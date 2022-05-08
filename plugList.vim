@@ -82,6 +82,9 @@ Plug 'jez/vim-better-sml',{'for':['sml']}
 "" rescipt "
 Plug 'rescript-lang/vim-rescript'
 
+
+"""which key"""
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 """"racket""""
 
 call plug#end()
