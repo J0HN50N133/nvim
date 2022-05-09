@@ -125,9 +125,14 @@ xmap ag <Plug>(coc-git-chunk-outer)
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
+function! s:show_documentation_fallback(e,r)
+        if !r
+                call feedKeys('k', 'in')
+        endif
+endfunction
 function! s:show_documentation()
-  if CocAction('hasProvider', 'hover')
-    call CocActionAsync('doHover')
+  if !(CocAction('hasProvider', 'hover'))
+    call CocActionAsync('doHover', show_documentation_fallback)
   else
     call feedkeys('K', 'in')
   endif
