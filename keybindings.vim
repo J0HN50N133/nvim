@@ -126,13 +126,14 @@ xmap ag <Plug>(coc-git-chunk-outer)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation_fallback(e,r)
+  echo e
         if !r
                 call feedKeys('k', 'in')
         endif
 endfunction
 function! s:show_documentation()
-  if !(CocAction('hasProvider', 'hover'))
-    call CocActionAsync('doHover', show_documentation_fallback)
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover' , function('s:show_documentation_fallback'))
   else
     call feedkeys('K', 'in')
   endif

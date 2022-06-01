@@ -43,8 +43,8 @@ Plug 'mhinz/vim-signify'
 "Auto complete
 Plug 'neoclide/coc.nvim',{'branch':'release'}
 
-Plug 'tpope/vim-markdown', {'for': 'markdown'}
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+"Plug 'tpope/vim-markdown', {'for': 'markdown'}
+"Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'lervag/vimtex', {'for': 'tex'}
 
 Plug 'jmcantrell/vim-virtualenv', {'for': 'python'}

@@ -107,8 +107,7 @@ set conceallevel=1
 let g:tex_conceal='abdmg'
 
 """"""""""vim-slime""""""""""
-let g:slime_target = "tmux"
-let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.2"}
+let g:slime_target = "neovim"
 
 """""signify"""""
 set updatetime=100
