@@ -107,7 +107,18 @@ set conceallevel=1
 let g:tex_conceal='abdmg'
 
 """"""""""vim-slime""""""""""
-let g:slime_target = "neovim"
+let g:slime_target = "tmux"
+let g:slime_paste_file = "$HOME/.slime_paste"
+let g:slime_cell_delimiter = "^\\s*##"
+let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.1"}
+let g:slime_dont_ask_default = 1
+let g:slime_bracketed_paste = 0
+let g:slime_preserve_curpos = 0
+" vim-slime-cells
+nmap <c-c><c-s> <Plug>SlimeSendCell
+nmap <c-c><CR> <Plug>SlimeCellsSendAndGoToNext
+nmap <c-c><c-Down> <Plug>SlimeCellsNext
+nmap <c-c><c-Up> <Plug>SlimeCellsPrev
 
 """""signify"""""
 set updatetime=100

@@ -33,6 +33,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'numirias/semshi', {'for': 'python', 'do': ':UpdateRemotePlugins'}
 Plug 'jpalardy/vim-slime'
+Plug 'klafyvel/vim-slime-cells', {'for': ['ocaml', 'haskell', 'python']}
 "highlight
 Plug 'sheerun/vim-polyglot'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
