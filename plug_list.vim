@@ -53,7 +53,6 @@ Plug 'jmcantrell/vim-virtualenv', {'for': 'python'}
 "" go
 Plug 'fatih/vim-go',{'for':'go'}
 Plug 'vim-jp/vim-go-extra',{'for':'go'}
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
 Plug 'AndrewRadev/splitjoin.vim'
 
 """ rust
@@ -69,7 +68,7 @@ Plug 'morhetz/gruvbox'
 Plug 'mhartington/oceanic-next'
 Plug 'marko-cerovac/material.nvim'
 Plug 'sainnhe/sonokai'
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vista.vim'
 Plug 'yggdroot/indentLine'
 
@@ -112,7 +111,6 @@ let g:coc_global_extensions = [
             \"coc-tag",
             \"coc-translator",
             \"coc-vimlsp",
-            \"coc-go",
             \"coc-pyright",
             \"coc-tsserver",
             \"coc-git"]
