@@ -8,8 +8,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader="\<space>"
 " 按<F3>打开或关闭目录树
-nmap <F12> :edit ~/.config/nvim/init.vim<CR>
-nmap <F5> :source ~/.config/nvim/init.vim<CR>
+nmap <F12> :edit $MYVIMRC<CR>
+nmap <F5> :source $MYVIMRC<CR>
 nmap W :w<CR>
 nmap <silent> w <Plug>(coc-ci-w)
 nmap <silent> b <Plug>(coc-ci-b)
@@ -45,7 +45,7 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 """""""""""""""""""
 
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=0
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -56,19 +56,22 @@ set shortmess+=c
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
 inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 " coc-translator
 " popup
 nmap <Leader>tt <Plug>(coc-translator-p)
@@ -97,7 +100,7 @@ nmap <silent> <M-CR> <Plug>(coc-codeaction-cursor)
 nmap <silent> <leader>oaf <Plug>(coc-codeaction)
 nmap <silent> <leader>oal <Plug>(coc-codeaction-line)
 nmap <silent> <leader>oac <Plug>(coc-codeaction-cursor)
-nmap <silent> <leader>oC <Plug>(coc-codelens-action)
+nmap <silent> <leader>ol <Plug>(coc-codelens-action)
 nmap <silent> <leader>oh :call CocAction('doHover')<CR>
 nmap <silent> <leader>op :call CocAction('definitionHover', 'preview')<CR>
 vmap <leader>p  <Plug>(coc-format-selected)
@@ -260,3 +263,7 @@ augroup vimbettersml
   " Uncomment to try out same-width conceal characters
   "let g:sml_greek_tyvar_show_tick = 1
 augroup END
+"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"

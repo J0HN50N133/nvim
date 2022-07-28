@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "c", "ocaml", "ocaml_interface", "go", "gomod", "javascript", "haskell" },
+  ensure_installed = { "c", "ocaml", "ocaml_interface","javascript", "haskell" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
