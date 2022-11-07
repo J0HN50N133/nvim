@@ -23,7 +23,6 @@ set expandtab
 set smarttab
 set smartindent
 set autoindent
-set conceallevel=3
 autocmd FileType html,css,xml,yaml,json set sw=2 ts=2
 "set lazyredraw " Don't redraw when we don't have to
 set noshowmode " Don't show the current mode (airline.vim takes care of us)

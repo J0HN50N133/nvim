@@ -12,3 +12,4 @@ source ~/.config/nvim/plugconf.vim
 source ~/.config/nvim/apperance.vim
 source ~/.config/nvim/keybindings.vim
 luafile ~/.config/nvim/treesitter.lua
+let conceallevel=3

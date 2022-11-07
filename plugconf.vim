@@ -36,8 +36,8 @@ call wilder#set_option('renderer', wilder#popupmenu_renderer(wilder#popupmenu_pa
       \ ],
       \ })))
 """""""""""""""""""""""gutentags""""""""""""""""""""""""""
-let $GTAGSLABEL = 'native'
-"let $GTAGSLABEL = 'native-pygments'
+"let $GTAGSLABEL = 'native'
+let $GTAGSLABEL = 'native-pygments'
 let $GTAGSCONF = '/usr/share/gtags/gtags.conf'
 let g:airline#extensions#tabline#enabled = 1
 " gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
@@ -65,8 +65,9 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
 
 " 禁用 gutentags 自动加载 gtags 数据库的行为
-let g:gutentags_auto_add_gtags_cscope = 0
-let g:gutentags_define_advanced_commands = 1
+let g:gutentags_auto_add_gtags_cscope = 1
+"let g:gutentags_define_advanced_commands = 1
+let g:gutentags_plus_switch = 1
 
 """""""""""""""""""""""asyncrun""""""""""""""""""""""""""
 

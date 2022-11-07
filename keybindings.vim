@@ -148,7 +148,7 @@ elseif &filetype == 'sh'
 elseif &filetype == 'python'
   :AsyncRun python3 %
 elseif &filetype == 'go'
-  :AsyncRun go run %
+  :AsyncRun -mode=terminal go run .
 elseif &filetype == 'racket'
   :AsyncRun racket %
 elseif &filetype == 'tex'
@@ -174,7 +174,9 @@ endfunc
 
 nmap <F2> :Vista!!<CR>
 nnoremap <silent><M-\|> :Tags<CR>
-nnoremap <silent><M-\> :Vista finder<CR>
+nnoremap <silent><M-\> :BTags<CR>
+inoremap <silent><M-\> <C-O>:BTags<CR>
+"nnoremap <silent><M-\> :Vista finder<CR>
 "nnoremap <C-/> <plug>NERDCommenterToggle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                      _   _
