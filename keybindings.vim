@@ -173,7 +173,7 @@ endfunc
 """"""""""""""""""""""""
 
 nmap <F2> :Vista!!<CR>
-nnoremap <silent><M-\|> :Tags<CR>
+nnoremap <silent><M-\|> :Vista finder<CR>
 nnoremap <silent><M-\> :BTags<CR>
 inoremap <silent><M-\> <C-O>:BTags<CR>
 "nnoremap <silent><M-\> :Vista finder<CR>

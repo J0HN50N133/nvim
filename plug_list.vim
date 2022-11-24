@@ -31,7 +31,7 @@ Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 """" python
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-Plug 'numirias/semshi', {'for': 'python', 'do': ':UpdateRemotePlugins'}
+"Plug 'numirias/semshi', {'for': 'python', 'do': ':UpdateRemotePlugins'}
 Plug 'jpalardy/vim-slime'
 Plug 'klafyvel/vim-slime-cells', {'for': ['ocaml', 'haskell', 'python']}
 "highlight

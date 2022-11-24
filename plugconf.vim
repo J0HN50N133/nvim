@@ -90,6 +90,7 @@ let g:vista_echo_cursor = 0
 let g:vista_executive_for = {
                   \ 'scheme': 'ctags',
                   \ 'c': 'ctags',
+                  \ 'cpp': 'ctags',
                   \}
 "let g:vista_fzf_preview = ['bottom:30%']
 let g:vista_echo_cursor_strategy='floating_win'
