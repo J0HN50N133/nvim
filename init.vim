@@ -1,6 +1,7 @@
-
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-          silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+let conf_root='~/.config/nvim/'
+let vimplug=conf_root . 'autoload/plug.vim'
+if empty(glob(vimplug))
+          silent call system('curl -fLo ' . vimplug . ' --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
           autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
