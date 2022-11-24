@@ -44,6 +44,9 @@ Plug 'mhinz/vim-signify'
 "Auto complete
 Plug 'neoclide/coc.nvim',{'branch':'release'}
 
+""""c++""""
+Plug 'johnsonlee-debug/a.vim'
+
 "Plug 'tpope/vim-markdown', {'for': 'markdown'}
 "Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'lervag/vimtex', {'for': 'tex'}

@@ -1,20 +1,16 @@
 {
         "coc.preferences.extensionUpdateCheck": "daily",
-        "coc.preferences.formatOnSaveFiletypes": [
-                "json",
-                "go",
-                "python",
-                "ocaml",
-                "rescript"
-        ],
+        "[go][python][ocaml][rescript]": {
+                "coc.preferences.formatOnSave": true
+        },
         "suggest.noselect": true,
         "suggest.enablePreselect": false,
         "diagnostic.refreshOnInsertMode": false,
         "diagnostic.checkCurrentLine": false,
         "diagnostic.virtualTextPrefix": ">>> ",
         "diagnostic.virtualText": true,
-        "diagnostic.virtualTextLevel":"hint",
-        "diagnostic.virtualTextCurrentLineOnly":false,
+        "diagnostic.virtualTextLevel": "hint",
+        "diagnostic.virtualTextCurrentLineOnly": false,
         "codeLens.enable": true,
         "go.goplsPath": "gopls",
         "go.goplsOptions": {
@@ -74,9 +70,31 @@
                         "rootPatterns": [
                                 "bsconfig.json"
                         ]
+                },
+                "ccls": {
+                        "command": "ccls",
+                        "filetypes": [
+                                "c",
+                                "cpp",
+                                "cuda",
+                                "objc",
+                                "objcpp"
+                        ],
+                        "rootPatterns": [
+                                ".ccls-root",
+                                "compile_commands.json"
+                        ],
+                        "initializationOptions": {
+                                "cache": {
+                                        "directory": ".ccls-cache"
+                                },
+                                "client": {
+                                        "snippetSupport": true
+                                }
+                        }
                 }
         },
-        "coc.preferences.rootPatterns": [
+        "workspace.rootPatterns": [
                 ".git",
                 ".hg",
                 ".projections.json",

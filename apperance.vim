@@ -2,7 +2,7 @@
 " => Appearance
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ambiwidth=single
-let g:airline_theme='sonokai'
+let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
@@ -26,7 +26,7 @@ let g:airline_symbols.dirty='⚡'
 if(has("termguicolors"))
 	set termguicolors
 endif
-colorscheme sonokai
+colorscheme gruvbox
 "let g:oceanic_next_terminal_bold = 1
 "let g:oceanic_next_terminal_italic = 1
 set background=dark    " Setting dark mode
