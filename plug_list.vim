@@ -46,7 +46,7 @@ Plug 'neoclide/coc.nvim',{'branch':'release'}
 
 """"c++""""
 Plug 'johnsonlee-debug/a.vim'
-
+Plug 'cdelledonne/vim-cmake'
 "Plug 'tpope/vim-markdown', {'for': 'markdown'}
 "Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'lervag/vimtex', {'for': 'tex'}
@@ -105,6 +105,7 @@ let g:coc_global_extensions = [
             \"coc-clangd",
             \"coc-dictionary",
             \"coc-go",
+						\"coc-cmake",
             \"coc-highlight",
             \"coc-html",
             \"coc-json",

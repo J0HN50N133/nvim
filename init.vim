@@ -8,6 +8,7 @@ endif
 set runtimepath^=~/.config/nvim runtimepath+=~/.config/nvim/after
 let &packpath=&runtimepath
 source ~/.config/nvim/general.vim
+source ~/.config/nvim/mycommand.vim
 source ~/.config/nvim/plug_list.vim
 source ~/.config/nvim/plugconf.vim
 source ~/.config/nvim/apperance.vim
