@@ -43,6 +43,7 @@ wilder.set_option('pipeline', {
              reverse = 1,        -- if 1, shows the candidates from bottom to top
              left = {' ', wilder.popupmenu_devicons()},
              right = { ' ', wilder.popupmenu_scrollbar() },
+             pumblend = 50,
              highlights = {
                gradient = gradient,
              },
