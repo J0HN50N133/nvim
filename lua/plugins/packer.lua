@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-speeddating'
   use 'tpope/vim-repeat'
-  use 'gelguy/wilder.nvim'
+  use {'gelguy/wilder.nvim', requires = {'romgrk/fzy-lua-native'}}
   use 'skywind3000/vim-preview' 
   use 'skywind3000/vim-terminal-help' 
   use 'skywind3000/asyncrun.vim' 
