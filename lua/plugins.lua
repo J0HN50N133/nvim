@@ -110,7 +110,7 @@ return require('packer').startup(function(use)
   use {'neovimhaskell/haskell-vim', ft = 'haskell'}
   use {'jez/vim-better-sml', ft = 'sml' }
   use {'rescript-lang/vim-rescript', ft =  'rescript'}
-
+  use {'rafcamlet/coc-nvim-lua', ft='lua'}
 -- racket
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
