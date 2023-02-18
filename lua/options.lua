@@ -18,7 +18,7 @@ o.autoindent = true
 o.tabstop=8
 o.softtabstop=8
 o.shiftwidth=8
-o.ambiwidth='double'
+o.ambiwidth='single'
 o.autowrite=true
 o.showmode=false --Don't show the current mode (airline.vim takes care of us)
 o.startofline=false --Don't reset cursor to start of line when moving around
@@ -38,6 +38,9 @@ o.cursorline = true
 o.cursorcolumn = true
 o.compatible = false
 o.magic  = true -- Enable extended regexes
+if vim.fn.has('termguicolors') then
+  o.termguicolors = true
+end
 
 au("FileType", {
     pattern = {"html", "css", "xml", "yaml", "json"},
