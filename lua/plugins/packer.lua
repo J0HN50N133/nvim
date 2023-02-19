@@ -70,7 +70,6 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
---use 'ctrlpvim/ctrlp.vim' 
   use 'matze/vim-move'
   use {'junegunn/fzf', run = vim.fn['fzf#install']}
   use 'junegunn/fzf.vim'
@@ -92,7 +91,6 @@ return require('packer').startup(function(use)
   use {'neoclide/coc.nvim', branch='release'}
 
 -- skirt
---use 'yggdroot/indentLine'
   use 'karb94/neoscroll.nvim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
@@ -104,7 +102,15 @@ return require('packer').startup(function(use)
 --use 'sainnhe/sonokai'
   use 'ryanoasis/vim-devicons'
   use 'liuchengxu/vista.vim'
-
+  use {
+    "https://git.sr.ht/~nedia/auto-save.nvim",
+    config = function()
+      require("auto-save").setup( {
+          events = { "InsertLeave", "BufLeave" },
+          exclude_ft = { "NvimTree" },
+        })
+    end
+  }
   use {'johnsonlee-debug/a.vim', ft = 'cpp'}
   use {'cdelledonne/vim-cmake', ft = 'cmake'}
 --use {'tpope/vim-markdown', ft = 'markdown'}
