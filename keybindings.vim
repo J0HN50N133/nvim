@@ -21,7 +21,7 @@ noremap <c-up> <c-w>+
 noremap <c-down> <c-w>-
 noremap <c-left> <c-w><
 noremap <c-right> <c-w>>
-noremap <F3> :NERDTreeToggle<CR>
+noremap <F3> :NvimTreeToggle<CR>
 map <BS> :nohl<CR>
 map f <Plug>Sneak_s
 map F <Plug>Sneak_S

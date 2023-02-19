@@ -51,7 +51,13 @@ return require('packer').startup(function(use)
   use 'skywind3000/vim-preview' 
   use 'skywind3000/vim-terminal-help' 
   use 'skywind3000/asyncrun.vim' 
-  use 'preservim/nerdtree' 
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
   use 'preservim/nerdcommenter' 
   use 'justinmk/vim-sneak' 
   use 'ludovicchabant/vim-gutentags' 
