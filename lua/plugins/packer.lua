@@ -70,7 +70,7 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use 'ctrlpvim/ctrlp.vim' 
+--use 'ctrlpvim/ctrlp.vim' 
   use 'matze/vim-move'
   use {'junegunn/fzf', run = vim.fn['fzf#install']}
   use 'junegunn/fzf.vim'
@@ -93,7 +93,7 @@ return require('packer').startup(function(use)
 
 -- skirt
 --use 'yggdroot/indentLine'
-  use 'terryma/vim-smooth-scroll'
+  use 'karb94/neoscroll.nvim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
 --use 'itchyny/vim-cursorword'
