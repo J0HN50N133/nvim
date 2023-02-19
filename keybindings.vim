@@ -9,7 +9,6 @@
 let mapleader="\<space>"
 " 按<F3>打开或关闭目录树
 nmap <F12> :edit $MYVIMRC<CR>
-nmap <F5> :source $MYVIMRC<CR>
 nmap W :w<CR>
 nmap <silent> w <Plug>(coc-ci-w)
 nmap <silent> b <Plug>(coc-ci-b)
@@ -23,8 +22,8 @@ noremap <c-left> <c-w><
 noremap <c-right> <c-w>>
 noremap <F3> :NvimTreeToggle<CR>
 map <BS> :nohl<CR>
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
+map s <Plug>Sneak_s
+map S <Plug>Sneak_S
 map t <Plug>Sneak_t
 map T <Plug>Sneak_T
 map j gj
@@ -54,9 +53,6 @@ set cmdheight=2
 "" Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
 " coc-translator
 " popup
 nmap <Leader>tt <Plug>(coc-translator-p)
@@ -217,7 +213,6 @@ nmap csc              <plug>(vimtex-cmd-change)
 nmap <F7>             <plug>(vimtex-cmd-create)
 nmap ]]               <plug>(vimtex-delim-close)
 
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 augroup vimbettersml
   au!

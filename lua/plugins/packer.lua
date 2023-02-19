@@ -65,7 +65,11 @@ return require('packer').startup(function(use)
   use 'jiangmiao/auto-pairs' 
   use 'gcmt/wildfire.vim' 
 --use 'mg979/vim-visual-multi' 
-  use {'liuchengxu/vim-which-key', cmd = {'WhichKey', 'WhichKey!'}}
+--use {'liuchengxu/vim-which-key', cmd = {'WhichKey', 'WhichKey!'}}
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
   use 'ctrlpvim/ctrlp.vim' 
   use 'matze/vim-move'
   use {'junegunn/fzf', run = vim.fn['fzf#install']}
