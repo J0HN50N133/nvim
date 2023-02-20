@@ -95,10 +95,21 @@ return require('packer').startup(function(use)
   use {'neoclide/coc.nvim', branch='release'}
 
 -- skirt
-  use 'karb94/neoscroll.nvim'
+  use {
+    'karb94/neoscroll.nvim'
+    config = function()
+      require('neoscroll').setup()
+    end
+  }
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
-  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim',
+    tag = "v3.*",
+    requires = 'nvim-tree/nvim-web-devicons',
+    config= function()
+      require('bufferline').setup()
+    end,
+  }
 --use 'itchyny/vim-cursorword'
   use 'luochen1990/rainbow'
   use 'morhetz/gruvbox'
