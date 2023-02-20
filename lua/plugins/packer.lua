@@ -98,6 +98,7 @@ return require('packer').startup(function(use)
   use 'karb94/neoscroll.nvim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 --use 'itchyny/vim-cursorword'
   use 'luochen1990/rainbow'
   use 'morhetz/gruvbox'

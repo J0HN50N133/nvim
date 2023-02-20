@@ -3,6 +3,7 @@ local fn = vim.fn
 
 vim.cmd.colorscheme('gruvbox')
 vim.o.background = 'dark'
+g['airline#extensions#tabline#enabled'] = 0
 g.airline_theme='gruvbox'
 g.airline_powerline_fonts = 1
 g.airline_skip_empty_sections = 1

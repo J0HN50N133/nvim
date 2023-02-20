@@ -4,7 +4,6 @@ local fn = vim.fn
 
 e.GTAGSLABEL = 'native-pygments'
 e.GTAGSCONF = '/usr/share/gtags/gtags.conf'
-g['airline#extensions#tabline#enabled'] = 1
 -- gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
 g.gutentags_project_root = {'.root', '.svn', '.git', '.hg', '.project'}
 g.gutentags_ctags_tagfile = '.tags'
