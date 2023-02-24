@@ -8,7 +8,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader="\<space>"
 " 按<F3>打开或关闭目录树
-nmap <F12> :edit $MYVIMRC<CR>
+"nmap <F12> :edit $MYVIMRC<CR>
 nmap W :w<CR>
 nmap <silent> w <Plug>(coc-ci-w)
 nmap <silent> b <Plug>(coc-ci-b)
@@ -20,7 +20,7 @@ noremap <c-up> <c-w>+
 noremap <c-down> <c-w>-
 noremap <c-left> <c-w><
 noremap <c-right> <c-w>>
-noremap <F3> :NvimTreeToggle<CR>
+noremap <leader>e :NvimTreeToggle<CR>
 map <BS> :nohl<CR>
 map s <Plug>Sneak_s
 map S <Plug>Sneak_S
@@ -164,33 +164,11 @@ endfunc
 "                      "
 """"""""""""""""""""""""
 
-nmap <F2> :Vista!!<CR>
+"nmap <F2> :Vista!!<CR>
 nnoremap <silent><M-\|> :Vista finder<CR>
 nnoremap <silent><M-\> :BTags<CR>
 inoremap <silent><M-\> <C-O>:BTags<CR>
 "nnoremap <silent><M-\> :Vista finder<CR>
-"nnoremap <C-/> <plug>NERDCommenterToggle
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                      _   _
-"  ___  __ _ ___ _   _ _ __ ___   ___ | |_(_) ___  _ __
-" / _ \/ _` / __| | | | '_ ` _ \ / _ \| __| |/ _ \| '_ \
-"|  __/ (_| \__ \ |_| | | | | | | (_) | |_| | (_) | | | |
-" \___|\__,_|___/\__, |_| |_| |_|\___/ \__|_|\___/|_| |_|
-"                |___/
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-let g:EasyMotion_smartcase = 1
-" j for jump
-nmap <Leader>jf <Plug>(easymotion-bd-f)
-nmap <Leader>jf <Plug>(easymotion-overwin-f)
-nmap <Leader>js <Plug>(easymotion-overwin-f2)
-nmap <Leader>jl <Plug>(easymotion-lineforward)
-nmap <Leader>jj <Plug>(easymotion-j)
-nmap <Leader>jk <Plug>(easymotion-k)
-nmap <Leader>jh <Plug>(easymotion-linebackward)
-nmap <Leader>jw <Plug>(easymotion-w)
-nmap <Leader>jb <Plug>(easymotion-b)
-nmap <Leader>je <Plug>(easymotion-e)
 
 nmap <Leader>li  <plug>(vimtex-info)
 nmap <Leader>lt  <plug>(vimtex-toc-open)

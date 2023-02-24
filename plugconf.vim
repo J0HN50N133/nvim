@@ -9,9 +9,6 @@ let g:asyncrun_bell = 1
 " 设置 F10 打开/关闭 Quickfix 窗口
 nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
 "
-"""""""""""""""""""""""easymotion""""""""""""""""""""""""""""""""""""
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-let g:EasyMotion_smartcase = 1
 
 """""""""""""""""""""""vista""""""""""""""""""""""""""""""""""""""""
 let g:vista_default_executive = 'coc'
