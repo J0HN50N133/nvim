@@ -41,6 +41,12 @@ return require('packer').startup(function(use)
   use 'rafcamlet/nvim-luapad'
   --Plug 'junegunn/vim-easy-align'
   use { 'junegunn/goyo.vim', cmd = 'Goyo' }
+  use { 'ggandor/leap.nvim',
+    requires = { 'tpope/vim-repeat' },
+    config = function ()
+      require('leap').add_default_mappings()
+    end,
+  }
   --use 'easymotion/vim-easymotion'
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
@@ -67,7 +73,6 @@ return require('packer').startup(function(use)
     end,
   }
   use 'preservim/nerdcommenter'
-  use 'justinmk/vim-sneak'
   use 'ludovicchabant/vim-gutentags'
   --use 'skywind3000/gutentags_plus'
   use 'jiangmiao/auto-pairs'

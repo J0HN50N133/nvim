@@ -7,8 +7,6 @@
 "          |___/                             |___/ "
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader="\<space>"
-" 按<F3>打开或关闭目录树
-"nmap <F12> :edit $MYVIMRC<CR>
 nmap W :w<CR>
 nmap <silent> w <Plug>(coc-ci-w)
 nmap <silent> b <Plug>(coc-ci-b)
@@ -22,10 +20,6 @@ noremap <c-left> <c-w><
 noremap <c-right> <c-w>>
 noremap <leader>e :NvimTreeToggle<CR>
 map <BS> :nohl<CR>
-map s <Plug>Sneak_s
-map S <Plug>Sneak_S
-map t <Plug>Sneak_t
-map T <Plug>Sneak_T
 map j gj
 map k gk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
