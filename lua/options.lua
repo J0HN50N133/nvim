@@ -1,4 +1,5 @@
 local o = vim.o
+local cmd = vim.cmd
 local fn = vim.fn
 local au = vim.api.nvim_create_autocmd
 
@@ -8,7 +9,6 @@ o.conceallevel = 3
 o.nu = true
 o.rnu = true
 o.undofile = true
-o.autochdir = true
 o.backup = false
 o.writebackup = false
 o.expandtab = true
@@ -38,6 +38,7 @@ o.cursorline = true
 o.cursorcolumn = true
 o.compatible = false
 o.magic  = true -- Enable extended regexes
+vim.opt.sessionoptions:append('localoptions')
 if vim.fn.has('termguicolors') then
   o.termguicolors = true
 end

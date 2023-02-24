@@ -1,3 +1,4 @@
+local pkg = 'plugins.'
 -- ensure packer exists
 local ensure_packer = function()
   local fn = vim.fn
@@ -37,6 +38,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
 
+  use 'rafcamlet/nvim-luapad'
 --Plug 'junegunn/vim-easy-align'
   use {'junegunn/goyo.vim', cmd = 'Goyo'}
   use 'easymotion/vim-easymotion'
@@ -48,9 +50,9 @@ return require('packer').startup(function(use)
   use 'tpope/vim-speeddating'
   use 'tpope/vim-repeat'
   use {'gelguy/wilder.nvim', requires = {'romgrk/fzy-lua-native'}}
-  use 'skywind3000/vim-preview' 
-  use 'skywind3000/vim-terminal-help' 
-  use 'skywind3000/asyncrun.vim' 
+  use 'skywind3000/vim-preview'
+  use 'skywind3000/vim-terminal-help'
+  use 'skywind3000/asyncrun.vim'
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -58,13 +60,19 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-  use 'preservim/nerdcommenter' 
-  use 'justinmk/vim-sneak' 
-  use 'ludovicchabant/vim-gutentags' 
---use 'skywind3000/gutentags_plus' 
-  use 'jiangmiao/auto-pairs' 
-  use 'gcmt/wildfire.vim' 
---use 'mg979/vim-visual-multi' 
+  use {
+    "GnikDroy/projections.nvim",
+    config = function()
+      require('plugins.projections')
+    end,
+  }
+  use 'preservim/nerdcommenter'
+  use 'justinmk/vim-sneak'
+  use 'ludovicchabant/vim-gutentags'
+--use 'skywind3000/gutentags_plus'
+  use 'jiangmiao/auto-pairs'
+  use 'gcmt/wildfire.vim'
+--use 'mg979/vim-visual-multi'
   use {
     {
       'nvim-telescope/telescope.nvim', tag = '0.1.x',
@@ -87,7 +95,7 @@ return require('packer').startup(function(use)
           ts_update()
       end,
   }
--- vcs 
+-- vcs
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
 
@@ -96,7 +104,7 @@ return require('packer').startup(function(use)
 
 -- skirt
   use {
-    'karb94/neoscroll.nvim'
+    'karb94/neoscroll.nvim',
     config = function()
       require('neoscroll').setup()
     end
@@ -113,20 +121,12 @@ return require('packer').startup(function(use)
 --use 'itchyny/vim-cursorword'
   use 'luochen1990/rainbow'
   use 'morhetz/gruvbox'
+  use 'folke/tokyonight.nvim'
 --use 'mhartington/oceanic-next'
 --use 'marko-cerovac/material.nvim'
 --use 'sainnhe/sonokai'
   use 'ryanoasis/vim-devicons'
   use 'liuchengxu/vista.vim'
-  use {
-    "https://git.sr.ht/~nedia/auto-save.nvim",
-    config = function()
-      require("auto-save").setup( {
-          events = { "InsertLeave", "BufLeave" },
-          exclude_ft = { "NvimTree" },
-        })
-    end
-  }
   use {'johnsonlee-debug/a.vim', ft = 'cpp'}
   use {'cdelledonne/vim-cmake', ft = 'cmake'}
 --use {'tpope/vim-markdown', ft = 'markdown'}
