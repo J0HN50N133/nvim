@@ -81,15 +81,15 @@ omap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap af <Plug>(coc-funcobj-a)
 " navigate chunks of current buffer
-nmap [g <Plug>(coc-git-prevchunk)
-nmap ]g <Plug>(coc-git-nextchunk)
+nmap <leader>[g <Plug>(coc-git-prevchunk)
+nmap <leader>]g <Plug>(coc-git-nextchunk)
 " navigate conflicts of current buffer
-nmap [c <Plug>(coc-git-prevconflict)
-nmap ]c <Plug>(coc-git-nextconflict)
+nmap <leader>[c <Plug>(coc-git-prevconflict)
+nmap <leader>]c <Plug>(coc-git-nextconflict)
 " show chunk diff at current position
-nmap gs <Plug>(coc-git-chunkinfo)
+nmap <leader>gs <Plug>(coc-git-chunkinfo)
 " show commit contains current position
-nmap gc <Plug>(coc-git-commit)
+nmap <leader>gc <Plug>(coc-git-commit)
 " create text object for git chunks
 omap ig <Plug>(coc-git-chunk-inner)
 xmap ig <Plug>(coc-git-chunk-inner)
