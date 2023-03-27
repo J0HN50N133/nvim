@@ -31,7 +31,7 @@ let g:vista#renderer#icons = {
 """""vimtex"""""
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method='zathura'
-set conceallevel=1
+"set conceallevel=1
 let g:tex_conceal='abdmg'
 
 """"""""""vim-slime""""""""""

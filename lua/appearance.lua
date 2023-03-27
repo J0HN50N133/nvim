@@ -1,10 +1,10 @@
 local g = vim.g
 local fn = vim.fn
 
-vim.cmd.colorscheme('gruvbox')
 vim.o.background = 'dark'
+vim.cmd.colorscheme('tokyonight-night')
 g['airline#extensions#tabline#enabled'] = 0
-g.airline_theme='gruvbox'
+g.airline_theme='tokyonight'
 g.airline_powerline_fonts = 1
 g.airline_skip_empty_sections = 1
 g.airline_symbols = {

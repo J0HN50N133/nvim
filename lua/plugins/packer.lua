@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
 
+  use 'lewis6991/impatient.nvim'
   use 'rafcamlet/nvim-luapad'
   --Plug 'junegunn/vim-easy-align'
   use { 'junegunn/goyo.vim', cmd = 'Goyo' }

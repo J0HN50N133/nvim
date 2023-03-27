@@ -1,3 +1,4 @@
+require('impatient') -- speed up startup time
 require('plugins')
 require('options')
 require('appearance')
