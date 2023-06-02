@@ -44,7 +44,7 @@ return require('packer').startup(function(use)
   use { 'junegunn/goyo.vim', cmd = 'Goyo' }
   use { 'ggandor/leap.nvim',
     requires = { 'tpope/vim-repeat' },
-    config = function ()
+    config = function()
       require('leap').add_default_mappings()
     end,
   }
@@ -54,7 +54,6 @@ return require('packer').startup(function(use)
   use 'AndrewRadev/splitjoin.vim'
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
-  use 'tpope/vim-speeddating'
   use 'tpope/vim-repeat'
   use { 'gelguy/wilder.nvim', requires = { 'romgrk/fzy-lua-native' } }
   use 'skywind3000/vim-preview'
@@ -65,7 +64,7 @@ return require('packer').startup(function(use)
     requires = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    tag = 'nightly'                  -- optional, updated every week. (see issue #1193)
   }
   use {
     "GnikDroy/projections.nvim",
@@ -81,7 +80,8 @@ return require('packer').startup(function(use)
   --use 'mg979/vim-visual-multi'
   use {
     {
-      'nvim-telescope/telescope.nvim', tag = '0.1.x',
+      'nvim-telescope/telescope.nvim',
+      tag = '0.1.x',
       requires = { { 'nvim-lua/plenary.nvim' } }
     },
     {
@@ -94,10 +94,6 @@ return require('packer').startup(function(use)
   --use 'jpalardy/vim-slime'
   --highlight
   use 'sheerun/vim-polyglot'
-  -- vcs
-  use 'tpope/vim-fugitive'
-  use 'mhinz/vim-signify'
-
   --Auto complete
   use { 'neoclide/coc.nvim', branch = 'release' }
 
@@ -108,8 +104,10 @@ return require('packer').startup(function(use)
       require('neoscroll').setup()
     end
   }
-  use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
   use { 'akinsho/bufferline.nvim',
     tag = "v3.*",
     requires = 'nvim-tree/nvim-web-devicons',

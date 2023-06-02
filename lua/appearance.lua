@@ -3,18 +3,6 @@ local fn = vim.fn
 
 vim.o.background = 'dark'
 vim.cmd.colorscheme('tokyonight-night')
-g['airline#extensions#tabline#enabled'] = 0
-g.airline_theme='tokyonight'
-g.airline_powerline_fonts = 1
-g.airline_skip_empty_sections = 1
-g.airline_symbols = {
-	branch = '',
-	readonly = '',
-	colnr = ' col:',
-	linenr = ' line:',
-	maxlinenr = ' ',
-	dirty = '✘',
-}
 g.rainbow_active = 1
 
 g.rainbow_conf = {
