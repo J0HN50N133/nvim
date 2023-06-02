@@ -8,8 +8,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader="\<space>"
 nmap W :w<CR>
-nmap <silent> w <Plug>(coc-ci-w)
-nmap <silent> b <Plug>(coc-ci-b)
 noremap Q :bdelete<CR>
 noremap gt :bn<CR>
 noremap gT :bp<CR>
@@ -43,81 +41,6 @@ set cmdheight=2
 "" Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-" coc-translator
-" popup
-nmap <Leader>tt <Plug>(coc-translator-p)
-vmap <Leader>tt <Plug>(coc-translator-pv)
-" echo
-nmap <Leader>te <Plug>(coc-translator-e)
-vmap <Leader>te <Plug>(coc-translator-ev)
-" replace
-nmap <Leader>tr <Plug>(coc-translator-r)
-vmap <Leader>tr <Plug>(coc-translator-rv)
-
-nmap <silent> <leader>- <Plug>(coc-diagnostic-prev)
-nmap <silent> <leader>+ <Plug>(coc-diagnostic-next)
-nmap <silent> <leader>oo :CocOutline<CR>
-nmap <silent> <leader>od <Plug>(coc-definition)
-nmap <silent> <M-]> <Plug>(coc-definition)
-nmap <silent> <leader>ot <Plug>(coc-type-definition)
-nmap <silent> <leader>oi <Plug>(coc-implementation)
-nmap <silent> <leader>or <Plug>(coc-references)
-nmap <silent> <leader>on <Plug>(coc-rename)
-nmap <silent> <leader>oN <Plug>(coc-refactor)
-nmap <silent> <leader>op :call CocActionAsync('format')<CR>
-nmap <silent> <leader>of <Plug>(coc-fix-current)
-"" actiono for file
-nmap <silent> <M-CR> <Plug>(coc-codeaction-cursor)
-nmap <silent> <leader>oaf <Plug>(coc-codeaction)
-nmap <silent> <leader>oal <Plug>(coc-codeaction-line)
-nmap <silent> <leader>oac <Plug>(coc-codeaction-cursor)
-nmap <silent> <leader>ol <Plug>(coc-codelens-action)
-nmap <silent> <leader>oh :call CocAction('doHover')<CR>
-nmap <silent> <leader>op :call CocAction('definitionHover', 'preview')<CR>
-vmap <leader>p  <Plug>(coc-format-selected)
-nmap <leader>p  <Plug>(coc-format)
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-" navigate chunks of current buffer
-nmap <leader>[g <Plug>(coc-git-prevchunk)
-nmap <leader>]g <Plug>(coc-git-nextchunk)
-" navigate conflicts of current buffer
-nmap <leader>[c <Plug>(coc-git-prevconflict)
-nmap <leader>]c <Plug>(coc-git-nextconflict)
-" show chunk diff at current position
-nmap <leader>gs <Plug>(coc-git-chunkinfo)
-" show commit contains current position
-nmap <leader>gc <Plug>(coc-git-commit)
-" create text object for git chunks
-omap ig <Plug>(coc-git-chunk-inner)
-xmap ig <Plug>(coc-git-chunk-inner)
-omap ag <Plug>(coc-git-chunk-outer)
-xmap ag <Plug>(coc-git-chunk-outer)
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation_fallback(e,r)
-  echo e
-        if !r
-                call feedKeys('k', 'in')
-        endif
-endfunction
-function! s:show_documentation()
-  if CocAction('hasProvider', 'hover')
-    call CocActionAsync('doHover' , function('s:show_documentation_fallback'))
-  else
-    call feedkeys('K', 'in')
-  endif
-endfunction
-
-" Search workspace symbols.
-nnoremap <silent><nowait> <space>ls  :<C-u>CocList -I symbols<cr>
-nnoremap <silent><nowait> <space>lf :CocList files<cr>
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
 "" compile and run
 noremap <leader>r :call CompileRun()<CR>
 func! CompileRun()
@@ -180,40 +103,3 @@ nmap cse              <plug>(vimtex-env-change)
 nmap csc              <plug>(vimtex-cmd-change)
 nmap <F7>             <plug>(vimtex-cmd-create)
 nmap ]]               <plug>(vimtex-delim-close)
-
-
-augroup vimbettersml
-  au!
-
-  " ----- Keybindings -----
-
-  au FileType sml nnoremap <silent> <buffer> <leader>t :SMLTypeQuery<CR>
-  au FileType sml nnoremap <silent> <buffer> gd :SMLJumpToDef<CR>
-
-  " open the REPL terminal buffer
-  au FileType sml nnoremap <silent> <buffer> <leader>is :SMLReplStart<CR>
-  " close the REPL (mnemonic: k -> kill)
-  au FileType sml nnoremap <silent> <buffer> <leader>ik :SMLReplStop<CR>
-  " build the project (using CM if possible)
-  au FileType sml nnoremap <silent> <buffer> <leader>ib :SMLReplBuild<CR>
-  " for opening a structure, not a file
-  au FileType sml nnoremap <silent> <buffer> <leader>io :SMLReplOpen<CR>
-  " use the current file into the REPL (even if using CM)
-  au FileType sml nnoremap <silent> <buffer> <leader>iu :SMLReplUse<CR>
-  " clear the REPL screen
-  au FileType sml nnoremap <silent> <buffer> <leader>ic :SMLReplClear<CR>
-  " set the print depth to 100
-  au FileType sml nnoremap <silent> <buffer> <leader>ip :SMLReplPrintDepth<CR>
-
-  " ----- Other settings -----
-
-  " Uncomment to try out conceal characters
-  "au FileType sml setlocal conceallevel=2
-
-  " Uncomment to try out same-width conceal characters
-  "let g:sml_greek_tyvar_show_tick = 1
-augroup END
-"
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
