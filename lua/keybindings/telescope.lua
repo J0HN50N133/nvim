@@ -1,7 +1,7 @@
-local builtin = require('telescope.builtin')
-
+local pkg = 'keybindings.'
 local km = vim.keymap
-km.set('n', '<leader>ff', builtin.find_files, {})
-km.set('n', '<leader>fg', builtin.live_grep, {})
-km.set('n', '<leader>fb', builtin.buffers, {})
-km.set('n', '<leader>fh', builtin.help_tags, {})
+local Telescope = function(cmd) return string.format("Telescope %s", cmd)end - _to - Colon
+km.set('n', '<leader>ff', Telescope('find_files'), {})
+km.set('n', '<leader>fg', Telescope('live_grep'), {})
+km.set('n', '<leader>fb', Telescope('buffers'), {})
+km.set('n', '<leader>fh', Telescope('help_tags'), {})

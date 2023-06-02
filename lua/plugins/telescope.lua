@@ -1,9 +1,11 @@
-require('telescope').setup({
-  extensions = {
-    coc = {
-        theme = 'ivy',
-        prefer_locations = true, -- always use Telescope locations to preview definitions/declarations/implementations etc
-    }
-  },
+local tele = require('telescope')
+tele.load_extension('coc')
+tele.load_extension('projections')
+tele.setup({
+        extensions = {
+                coc = {
+                        theme = 'ivy',
+                        prefer_locations = true, -- always use Telescope locations to preview definitions/declarations/implementations etc
+                }
+        },
 })
-require('telescope').load_extension('coc')

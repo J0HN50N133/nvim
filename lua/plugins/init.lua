@@ -16,27 +16,34 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 require('lazy').setup({
         -- My plugins here
-        'rafcamlet/nvim-luapad',
+        { 'rafcamlet/nvim-luapad', cmd = 'Luapad' },
         {
                 'nathom/filetype.nvim',
                 config = function()
                         vim.g.did_load_filetypes = 1
                 end
         },
-        { 'junegunn/goyo.vim',    cmd = 'Goyo' },
+        { 'junegunn/goyo.vim',     cmd = 'Goyo' },
         {
                 'ggandor/leap.nvim',
-                dependencies = { 'tpope/vim-repeat' },
+                dependencies = { 'tpope/vim-repeat', keys = '.' },
+                keys = {
+                        { "s",  mode = { "n", "x", "o" }, desc = "Leap forward to" },
+                        { "S",  mode = { "n", "x", "o" }, desc = "Leap backward to" },
+                        { "gs", mode = { "n", "x", "o" }, desc = "Leap from windows" },
+                },
                 config = function()
-                        require('leap').add_default_mappings()
+                        require('leap').add_default_mappings(true)
+                        vim.keymap.del({ "x", "o" }, "x")
+                        vim.keymap.del({ "x", "o" }, "X")
                 end,
         },
         --'easymotion/vim-easymotion'
         'SirVer/ultisnips',
-        'honza/vim-snippets',
-        'AndrewRadev/splitjoin.vim',
-        'tpope/vim-surround',
-        { 'tpope/vim-unimpaired', keys = { '[<Space>', ']<Space>' } },
+        { 'honza/vim-snippets',        event = 'VeryLazy' },
+        { 'AndrewRadev/splitjoin.vim', keys = { 'gS', 'gJ' } },
+        { 'tpope/vim-surround',        event = 'VeryLazy' },
+        { 'tpope/vim-unimpaired',      keys = { '[<Space>', ']<Space>' } },
         'tpope/vim-repeat',
         {
                 'gelguy/wilder.nvim',
@@ -52,7 +59,7 @@ require('lazy').setup({
                 keys = { "<m-=>", "<m-H>", "<m-L>", "<m-J>", "<m-K>", "<m-N>", "<m-q>", "<m-->" }
         },
 
-        'skywind3000/asyncrun.vim',
+        { 'skywind3000/asyncrun.vim', cmd = 'AsyncRun' },
         {
                 'nvim-tree/nvim-tree.lua',
                 dependencies = {
@@ -71,7 +78,7 @@ require('lazy').setup({
                         require('plugins.projections')
                 end,
         },
-        'preservim/nerdcommenter',
+        { 'preservim/nerdcommenter',  keys = { '<leader>c<space>', '<leader>cc' } },
         {
                 'ludovicchabant/vim-gutentags',
                 config = function()
@@ -79,8 +86,9 @@ require('lazy').setup({
                 end
         },
         --'skywind3000/gutentags_plus'
-        'jiangmiao/auto-pairs',
-        'gcmt/wildfire.vim',
+        --
+        {"windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end},
+        { 'gcmt/wildfire.vim',    keys = { '<CR>' } },
         --'mg979/vim-visual-multi',
         {
                 {
@@ -89,22 +97,23 @@ require('lazy').setup({
                         config = function()
                                 require(pkg .. 'telescope')
                         end,
+                        cmd = "Telescope",
                         dependencies = { { 'nvim-lua/plenary.nvim' } },
                 },
                 {
                         'fannheyward/telescope-coc.nvim',
+                        lazy = true
                 },
         },
         'fedepujol/move.nvim',
-        { 'junegunn/fzf',               build = vim.fn['fzf#install'] },
-        'junegunn/fzf.vim',
-        --'jpalardy/vim-slime',
+        { 'junegunn/fzf',         build = vim.fn['fzf#install'] },
         --highlight
-        --'sheerun/vim-polyglot',
+        { 'sheerun/vim-polyglot', enabled = false },
         --Auto complete
         {
                 'neoclide/coc.nvim',
                 branch = 'release',
+                lazy = false,
                 config = function()
                         require(pkg .. 'coc')
                 end
@@ -119,6 +128,7 @@ require('lazy').setup({
         },
         {
                 'nvim-lualine/lualine.nvim',
+                event = "VeryLazy",
                 config = function()
                         require(pkg .. 'lualine')
                 end,
@@ -126,6 +136,7 @@ require('lazy').setup({
         },
         {
                 'akinsho/bufferline.nvim',
+                event = "VeryLazy",
                 version = "v3.*",
                 dependencies = 'nvim-tree/nvim-web-devicons',
                 config = function()
@@ -133,14 +144,14 @@ require('lazy').setup({
                 end,
         },
         --'itchyny/vim-cursorword',
-        'luochen1990/rainbow',
-        'morhetz/gruvbox',
-        'folke/tokyonight.nvim',
+        { 'luochen1990/rainbow',   event = 'VeryLazy' },
+        { 'morhetz/gruvbox',       lazy = true },
+        { 'folke/tokyonight.nvim', lazy = true },
         --'mhartington/oceanic-next',
         --'marko-cerovac/material.nvim',
         --'sainnhe/sonokai',
         'ryanoasis/vim-devicons',
-        'liuchengxu/vista.vim',
+        { 'liuchengxu/vista.vim',       cmd = { 'Vista' } },
         { 'johnsonlee-debug/a.vim',     ft = 'cpp' },
         { 'cdelledonne/vim-cmake',      ft = 'cmake' },
         --{'tpope/vim-markdown', ft = 'markdown'},
@@ -157,6 +168,5 @@ require('lazy').setup({
         { 'jez/vim-better-sml',         ft = 'sml' },
         { 'rescript-lang/vim-rescript', ft = 'rescript' },
         { 'rafcamlet/coc-nvim-lua',     ft = 'lua' },
-        { 'dstein64/vim-startuptime' },
 })
 -- coc plug

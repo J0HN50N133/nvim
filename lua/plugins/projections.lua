@@ -2,7 +2,6 @@ require("projections").setup({
 		patterns = { ".git", ".svn", ".hg", ".root" },
 	})
 
-require('telescope').load_extension('projections')
 
 -- Autostore session on VimExit
 local Session = require("projections.session")
