@@ -17,8 +17,13 @@ vim.g.mapleader = " "
 require('lazy').setup({
         -- My plugins here
         'rafcamlet/nvim-luapad',
-        --Plug 'junegunn/vim-easy-align'
-        { 'junegunn/goyo.vim', cmd = 'Goyo' },
+        {
+                'nathom/filetype.nvim',
+                config = function()
+                        vim.g.did_load_filetypes = 1
+                end
+        },
+        { 'junegunn/goyo.vim',    cmd = 'Goyo' },
         {
                 'ggandor/leap.nvim',
                 dependencies = { 'tpope/vim-repeat' },
@@ -31,7 +36,7 @@ require('lazy').setup({
         'honza/vim-snippets',
         'AndrewRadev/splitjoin.vim',
         'tpope/vim-surround',
-        'tpope/vim-unimpaired',
+        { 'tpope/vim-unimpaired', keys = { '[<Space>', ']<Space>' } },
         'tpope/vim-repeat',
         {
                 'gelguy/wilder.nvim',
@@ -91,11 +96,11 @@ require('lazy').setup({
                 },
         },
         'fedepujol/move.nvim',
-        { 'junegunn/fzf',      build = vim.fn['fzf#install'] },
+        { 'junegunn/fzf',               build = vim.fn['fzf#install'] },
         'junegunn/fzf.vim',
         --'jpalardy/vim-slime',
         --highlight
-        'sheerun/vim-polyglot',
+        --'sheerun/vim-polyglot',
         --Auto complete
         {
                 'neoclide/coc.nvim',
