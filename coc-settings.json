@@ -13,7 +13,7 @@
         "diagnostic.virtualTextCurrentLineOnly": false,
         "codeLens.enable": true,
         "codeLens.position": "eol",
-        "go.goplsPath": "opls",
+        "go.goplsPath": "gopls",
         "go.goplsOptions": {
                 "completeUnimported": true,
                 "gofumpt": true,
@@ -105,4 +105,5 @@
         "python.pythonPath": "python3",
         "git.enableGutters": true,
         "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
+        "sumneko-lua.enableNvimLuaDev": true,
 }
