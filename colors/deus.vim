@@ -1,1 +1,0 @@
-/home/johnsonlee/.config/nvim/plugged/vim-deus/colors/deus.vim
