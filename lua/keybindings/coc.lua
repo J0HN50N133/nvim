@@ -82,5 +82,5 @@ keyset('n', Leader(']c'), git('nextconflict'))
 keyset('n', Leader('gs'), git('chunkinfo'))
 -- show commit contains current position
 keyset('n', Leader('gc'), git('commit'))
-keyset({'o', 'x'}, 'ig', git('chunk-inner'))
-keyset({'o', 'x'}, 'ag', git('chunk-outer'))
+keyset({ 'o', 'x' }, 'ig', git('chunk-inner'))
+keyset({ 'o', 'x' }, 'ag', git('chunk-outer'))

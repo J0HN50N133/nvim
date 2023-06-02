@@ -1,4 +1,4 @@
-require('impatient') -- speed up startup time
+vim.loader.enable()
 require('plugins')
 require('options')
 require('appearance')

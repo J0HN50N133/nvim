@@ -3,13 +3,12 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup({
-		update_focused_file = {
-			enable = true,
-			update_cwd = false,
-		},
-	})
+  update_focused_file = {
+    enable = true,
+    update_root = true,
+  },
+})
 local function open_nvim_tree(data)
-
   -- buffer is a directory
   local directory = vim.fn.isdirectory(data.file) == 1
 

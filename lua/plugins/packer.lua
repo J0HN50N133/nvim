@@ -32,13 +32,13 @@ vim.g.coc_global_extensions = {
   "coc-pyright",
   "coc-tsserver",
   "coc-git",
+  "coc-sumneko-lua",
 }
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
 
-  use 'lewis6991/impatient.nvim'
   use 'rafcamlet/nvim-luapad'
   --Plug 'junegunn/vim-easy-align'
   use { 'junegunn/goyo.vim', cmd = 'Goyo' }
@@ -88,19 +88,12 @@ return require('packer').startup(function(use)
       'fannheyward/telescope-coc.nvim'
     },
   }
-  use 'matze/vim-move'
+  use 'fedepujol/move.nvim'
   use { 'junegunn/fzf', run = vim.fn['fzf#install'] }
   use 'junegunn/fzf.vim'
-  use 'jpalardy/vim-slime'
+  --use 'jpalardy/vim-slime'
   --highlight
   use 'sheerun/vim-polyglot'
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function()
-      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-      ts_update()
-    end,
-  }
   -- vcs
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
