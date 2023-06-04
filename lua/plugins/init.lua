@@ -17,12 +17,6 @@ vim.g.mapleader = " "
 require('lazy').setup({
         -- My plugins here
         { 'rafcamlet/nvim-luapad', cmd = 'Luapad' },
-        {
-                'nathom/filetype.nvim',
-                config = function()
-                        vim.g.did_load_filetypes = 1
-                end
-        },
         { 'junegunn/goyo.vim',     cmd = 'Goyo' },
         {
                 'ggandor/leap.nvim',
@@ -61,6 +55,16 @@ require('lazy').setup({
 
         { 'skywind3000/asyncrun.vim', cmd = 'AsyncRun' },
         {
+                'nvim-treesitter/nvim-treesitter',
+                event = 'VeryLazy',
+                build = function()
+                        vim.cmd.TSUpdate()
+                end,
+                config = function()
+                        require(pkg .. 'treesitter')
+                end
+        },
+        {
                 'nvim-tree/nvim-tree.lua',
                 dependencies = {
                         'nvim-tree/nvim-web-devicons', -- optional, for file icons
@@ -87,8 +91,8 @@ require('lazy').setup({
         },
         --'skywind3000/gutentags_plus'
         --
-        {"windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end},
-        { 'gcmt/wildfire.vim',    keys = { '<CR>' } },
+        { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end },
+        { 'gcmt/wildfire.vim',     keys = { '<CR>' } },
         --'mg979/vim-visual-multi',
         {
                 {
