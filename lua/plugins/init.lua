@@ -47,13 +47,16 @@ require('lazy').setup({
                         require(pkg .. 'wilder')
                 end
         },
-        'skywind3000/vim-preview',
         {
-                'skywind3000/vim-terminal-help',
-                keys = { "<m-=>", "<m-H>", "<m-L>", "<m-J>", "<m-K>", "<m-N>", "<m-q>", "<m-->" }
-        },
+                'skywind3000/vim-preview',
+                {
+                        'skywind3000/vim-terminal-help',
+                        keys = { "<m-=>", "<m-H>", "<m-L>", "<m-J>", "<m-K>", "<m-N>", "<m-q>", "<m-->" }
+                },
 
-        { 'skywind3000/asyncrun.vim', cmd = 'AsyncRun' },
+                { 'skywind3000/asyncrun.vim', cmd = 'AsyncRun' },
+                --'skywind3000/gutentags_plus'
+        },
         {
                 'nvim-treesitter/nvim-treesitter',
                 event = 'VeryLazy',
@@ -82,17 +85,15 @@ require('lazy').setup({
                         require('plugins.projections')
                 end,
         },
-        { 'preservim/nerdcommenter',  keys = { '<leader>c<space>', '<leader>cc' } },
+        { 'preservim/nerdcommenter', keys = { '<leader>c<space>', '<leader>cc' } },
         {
                 'ludovicchabant/vim-gutentags',
                 config = function()
                         require(pkg .. 'gutentags')
                 end
         },
-        --'skywind3000/gutentags_plus'
-        --
-        { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end },
-        { 'gcmt/wildfire.vim',     keys = { '<CR>' } },
+        { "windwp/nvim-autopairs",   config = function() require("nvim-autopairs").setup {} end },
+        { 'gcmt/wildfire.vim',       keys = { '<CR>' } },
         --'mg979/vim-visual-multi',
         {
                 {
@@ -102,12 +103,19 @@ require('lazy').setup({
                                 require(pkg .. 'telescope')
                         end,
                         cmd = "Telescope",
-                        dependencies = { { 'nvim-lua/plenary.nvim' } },
+                        dependencies = { 'nvim-lua/plenary.nvim' },
                 },
-                { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+                {
+                        'nvim-telescope/telescope-fzf-native.nvim',
+                        build = 'make'
+                },
                 {
                         'fannheyward/telescope-coc.nvim',
                         lazy = true
+                },
+                {
+                        'tom-anders/telescope-vim-bookmarks.nvim',
+                        dependencies = { 'MattesGroeger/vim-bookmarks' }
                 },
         },
         'fedepujol/move.nvim',
