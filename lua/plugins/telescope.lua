@@ -1,6 +1,7 @@
 local tele = require('telescope')
 tele.load_extension('coc')
 tele.load_extension('projections')
+tele.load_extension('fzf')
 tele.setup({
         extensions = {
                 coc = {
