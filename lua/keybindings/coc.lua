@@ -6,10 +6,10 @@ local keyset = km.set
 --- @param cmd string
 -- return coc-`cmd`
 local function Coc(cmd)
-    return string.format("coc-%s", cmd)
+        return string.format("coc-%s", cmd)
 end
 local function CocKy(keyseq)
-    return Leader('o' .. keyseq)
+        return Leader('o' .. keyseq)
 end
 
 local PlugCoc = Coc - _to - Plug
@@ -21,7 +21,7 @@ keyset('n', 'b', PlugCoc("ci-b"), { silent = true })
 --- @key string
 -- return keybinding in keybinding space of coc-translator
 function TrnsKy(key)
-    return Leader('t' .. key)
+        return Leader('t' .. key)
 end
 
 -- popup
@@ -37,13 +37,22 @@ km.set('v', TrnsKy('r'), trans('rv'))
 
 local opts = { silent = true, nowait = true }
 
+local jump_action_table = {
+        -- action            preview jump
+        jumpDefinition     = { 'd', 'D' },
+        jumpDeclaration    = { 'c', 'C' },
+        jumpTypeDefinition = { 't', 'T' },
+        jumpImplementation = { 'i', 'I' },
+        jumpReferences     = { 'r', 'R' }
+}
+for action, keys in pairs(jump_action_table) do
+        for _, key in ipairs(keys) do
+                keyset('n', CocKy(key), function() vim.fn.CocAction(action, key == key:upper()) end, opts)
+        end
+end
+keyset('n', CocKy('o'), Colon('CocOutline'), opts)
 keyset('n', CocKy('-'), PlugCoc('diagnostic-prev'), opts)
 keyset('n', CocKy('+'), PlugCoc('diagnostic-next'), opts)
-keyset('n', CocKy('o'), Colon('CocOutline'), opts)
-keyset('n', CocKy('d'), PlugCoc('definition'), opts)
-keyset('n', CocKy('t'), PlugCoc('type-definition'), opts)
-keyset('n', CocKy('i'), PlugCoc('implementation'), opts)
-keyset('n', CocKy('r'), PlugCoc('references'), opts)
 keyset('n', CocKy('n'), PlugCoc('rename'), opts)
 keyset('n', CocKy('N'), PlugCoc('refactor'), opts)
 keyset('n', CocKy('p'), CocActionAsync('format'), opts)
@@ -52,22 +61,20 @@ keyset('n', Alt('CR'), PlugCoc('codeaction-cursor'), opts)
 keyset('n', CocKy('af'), PlugCoc('codeaction'), opts)
 keyset('n', CocKy('al'), PlugCoc('codeaction-line'), opts)
 keyset('n', CocKy('l'), PlugCoc('codelens-action'), opts)
-keyset('n', CocKy('h'), CocAction('doHover'), opts)
-keyset('n', CocKy('p'), CocAction('definitionHover', 'preview'), opts)
 keyset('v', Leader('p'), PlugCoc('format-selected'), opts)
 keyset('n', Leader('p'), PlugCoc('format'), opts)
 keyset({ 'x', 'o' }, 'if', PlugCoc('funcobj-i'), opts)
 keyset({ 'x', 'o' }, 'af', PlugCoc('funcobj-a'), opts)
 -- Use K to show documentation in preview window.
 function _G.show_docs()
-    local cw = vim.fn.expand('<cword>')
-    if vim.fn.index({ 'vim', 'help' }, vim.bo.filetype) >= 0 then
-        vim.api.nvim_command('h ' .. cw)
-    elseif vim.api.nvim_eval('coc#rpc#ready()') then
-        vim.fn.CocActionAsync('doHover')
-    else
-        vim.api.nvim_command('!' .. vim.o.keywordprg .. ' ' .. cw)
-    end
+        local cw = vim.fn.expand('<cword>')
+        if vim.fn.index({ 'vim', 'help' }, vim.bo.filetype) >= 0 then
+                vim.api.nvim_command('h ' .. cw)
+        elseif vim.api.nvim_eval('coc#rpc#ready()') then
+                vim.fn.CocActionAsync('doHover')
+        else
+                vim.api.nvim_command('!' .. vim.o.keywordprg .. ' ' .. cw)
+        end
 end
 
 keyset('n', 'K', _G.show_docs)
