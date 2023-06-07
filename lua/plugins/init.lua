@@ -36,9 +36,12 @@ require('lazy').setup({
         'SirVer/ultisnips',
         { 'honza/vim-snippets',        event = 'VeryLazy' },
         { 'AndrewRadev/splitjoin.vim', keys = { 'gS', 'gJ' } },
-        { 'tpope/vim-surround',        event = 'VeryLazy' },
-        { 'tpope/vim-unimpaired',      keys = { '[<Space>', ']<Space>' } },
-        'tpope/vim-repeat',
+        {
+                { 'tpope/vim-surround',   event = 'VeryLazy' },
+                { 'tpope/vim-unimpaired', keys = { '[<Space>', ']<Space>' } },
+                --{'tpope/vim-markdown', ft = 'markdown'},
+                'tpope/vim-repeat',
+        },
         {
                 'gelguy/wilder.nvim',
                 dependencies = { 'romgrk/fzy-lua-native' },
@@ -46,6 +49,10 @@ require('lazy').setup({
                 config = function()
                         require(pkg .. 'wilder')
                 end
+        },
+        {
+                'andymass/vim-matchup',
+                event = 'VeryLazy'
         },
         {
                 'skywind3000/vim-preview',
@@ -66,6 +73,10 @@ require('lazy').setup({
                 config = function()
                         require(pkg .. 'treesitter')
                 end
+        },
+        {
+                'nvim-treesitter/nvim-treesitter-context',
+                dependencies = 'nvim-treesitter/nvim-treesitter'
         },
         {
                 'nvim-tree/nvim-tree.lua',
@@ -167,7 +178,6 @@ require('lazy').setup({
         { 'liuchengxu/vista.vim',       cmd = { 'Vista' } },
         { 'johnsonlee-debug/a.vim',     ft = 'cpp' },
         { 'cdelledonne/vim-cmake',      ft = 'cmake' },
-        --{'tpope/vim-markdown', ft = 'markdown'},
         { 'lervag/vimtex',              ft = 'tex' },
         { 'klafyvel/vim-slime-cells',   ft = { 'ocaml', 'haskell', 'python' } },
         { 'rust-lang/rust.vim',         ft = 'rust' },
