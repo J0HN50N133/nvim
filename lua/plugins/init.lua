@@ -52,7 +52,8 @@ require('lazy').setup({
         },
         {
                 'andymass/vim-matchup',
-                event = 'VeryLazy'
+                keys = '%',
+                cmd = { 'MatchupWhereAmI' }
         },
         {
                 'skywind3000/vim-preview',
