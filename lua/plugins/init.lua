@@ -129,6 +129,25 @@ require('lazy').setup({
                         'johnsonlee-debug/telescope-vim-bookmarks.nvim',
                         dependencies = { 'MattesGroeger/vim-bookmarks' }
                 },
+                {
+                        'sudormrfbin/cheatsheet.nvim',
+
+                        dependencies = {
+                                { 'nvim-telescope/telescope.nvim' },
+                                { 'nvim-lua/popup.nvim' },
+                                { 'nvim-lua/plenary.nvim' },
+                        }
+                },
+                {
+                        {
+                                'stevearc/dressing.nvim',
+                                opts = {},
+                        },
+                        {
+                                'stevearc/overseer.nvim',
+                                opts = {},
+                        },
+                },
         },
         'fedepujol/move.nvim',
         { 'junegunn/fzf',         build = vim.fn['fzf#install'] },
