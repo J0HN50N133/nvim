@@ -145,7 +145,7 @@ require('lazy').setup({
                         },
                         {
                                 'stevearc/overseer.nvim',
-                                opts = {},
+                                opts = { },
                         },
                 },
         },
@@ -153,6 +153,7 @@ require('lazy').setup({
         { 'junegunn/fzf',         build = vim.fn['fzf#install'] },
         --highlight
         { 'sheerun/vim-polyglot', enabled = false },
+        { 'rcarriga/nvim-notify' },
         --Auto complete
         {
                 'neoclide/coc.nvim',
