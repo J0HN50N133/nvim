@@ -145,7 +145,7 @@ require('lazy').setup({
                         },
                         {
                                 'stevearc/overseer.nvim',
-                                opts = { },
+                                opts = {},
                         },
                 },
         },
@@ -211,6 +211,6 @@ require('lazy').setup({
         { 'neovimhaskell/haskell-vim',  ft = 'haskell' },
         { 'jez/vim-better-sml',         ft = 'sml' },
         { 'rescript-lang/vim-rescript', ft = 'rescript' },
-        { 'rafcamlet/coc-nvim-lua',     ft = 'lua' },
+        { 'folke/neodev.nvim' },
 })
 -- coc plug
