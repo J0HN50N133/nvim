@@ -12,10 +12,11 @@ vim.g.coc_global_extensions = {
   "coc-marketplace",
   "coc-snippets",
   "coc-tag",
+  "coc-emoji",
+  "coc-word",
   "coc-translator",
   "coc-vimlsp",
   "coc-pyright",
-  "coc-tsserver",
   "coc-git",
   "coc-sumneko-lua",
 }
