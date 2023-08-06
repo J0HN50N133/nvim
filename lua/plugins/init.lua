@@ -96,6 +96,7 @@ require('lazy').setup({
                 config = function()
                         require('plugins.projections')
                 end,
+                branch = 'pre_release'
         },
         { 'preservim/nerdcommenter', keys = { '<leader>c<space>', '<leader>cc' } },
         {
