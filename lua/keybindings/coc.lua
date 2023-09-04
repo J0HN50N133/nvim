@@ -51,8 +51,8 @@ for action, keys in pairs(jump_action_table) do
         end
 end
 keyset('n', CocKy('o'), Colon('CocOutline'), opts)
-keyset('n', CocKy('-'), PlugCoc('diagnostic-prev'), opts)
-keyset('n', CocKy('+'), PlugCoc('diagnostic-next'), opts)
+keyset('n', Leader('-'), PlugCoc('diagnostic-prev'), opts)
+keyset('n', Leader('='), PlugCoc('diagnostic-next'), opts)
 keyset('n', CocKy('n'), PlugCoc('rename'), opts)
 keyset('n', CocKy('N'), PlugCoc('refactor'), opts)
 keyset('n', CocKy('p'), CocActionAsync('format'), opts)

@@ -16,10 +16,10 @@ noremap <c-up> <c-w>+
 noremap <c-down> <c-w>-
 noremap <c-left> <c-w><
 noremap <c-right> <c-w>>
-noremap <leader>e :NvimTreeToggle<CR>
-map <BS> :nohl<CR>
-map j gj
-map k gk
+noremap <silent><leader>e :NvimTreeToggle<CR>
+map <silent><BS> :nohl<CR>
+map <silent>j gj
+map <silent>k gk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
