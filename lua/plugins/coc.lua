@@ -11,7 +11,6 @@ vim.g.coc_global_extensions = {
   "coc-lists",
   "coc-marketplace",
   "coc-snippets",
-  "coc-tag",
   "coc-emoji",
   "coc-word",
   "coc-translator",
@@ -19,4 +18,6 @@ vim.g.coc_global_extensions = {
   "coc-pyright",
   "coc-git",
   "coc-sumneko-lua",
+  "coc-rust-analyzer",
+  "coc-toml",
 }
