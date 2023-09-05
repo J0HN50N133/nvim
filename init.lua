@@ -1,4 +1,5 @@
 vim.loader.enable()
+require('bootstrap')
 require('plugins')
 require('options')
 require('appearance')
