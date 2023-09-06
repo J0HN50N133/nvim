@@ -191,7 +191,7 @@ require('lazy').setup({
         { 'klafyvel/vim-slime-cells',   ft = { 'ocaml', 'haskell', 'python' } },
         { 'rust-lang/rust.vim',         ft = 'rust' },
         --{'numirias/semshi', ft = 'python', build = vim.fn[':UpdateRemotePlugins']},
-        { 'python-mode/python-mode',    ft = 'python',                        branch = 'develop' },
+        --{ 'python-mode/python-mode',    ft = 'python',                        branch = 'develop' },
         { 'jmcantrell/vim-virtualenv',  ft = 'python' },
         { 'fatih/vim-go',               ft = 'go' },
         { 'vim-jp/vim-go-extra',        ft = 'go' },
