@@ -19,7 +19,6 @@ require('lazy').setup({
                         vim.keymap.del({ "x", "o" }, "X")
                 end,
         },
-        --'easymotion/vim-easymotion'
         'SirVer/ultisnips',
         { 'honza/vim-snippets',        event = 'VeryLazy' },
         { 'AndrewRadev/splitjoin.vim', keys = { 'gS', 'gJ' } },
@@ -151,6 +150,17 @@ require('lazy').setup({
                         require(pkg .. 'coc')
                 end
         },
+        {
+                'mfussenegger/nvim-dap',
+                dependencies = {
+                        "rcarriga/nvim-dap-ui",
+                        "theHamsta/nvim-dap-virtual-text",
+                },
+                opts = {},
+                config = function(_, opts)
+                        require(pkg .. 'dap')(opts)
+                end
+        },
 
         -- skirt
         {
@@ -178,18 +188,18 @@ require('lazy').setup({
         },
         --'itchyny/vim-cursorword',
         { 'luochen1990/rainbow',   event = 'VeryLazy' },
-        { 'morhetz/gruvbox',       lazy = true },
+        --{ 'morhetz/gruvbox',       lazy = true },
         { 'folke/tokyonight.nvim', lazy = true },
         --'mhartington/oceanic-next',
         --'marko-cerovac/material.nvim',
         --'sainnhe/sonokai',
         'ryanoasis/vim-devicons',
-        { 'liuchengxu/vista.vim',       cmd = { 'Vista' } },
-        { 'johnsonlee-debug/a.vim',     ft = 'cpp' },
+        --{ 'liuchengxu/vista.vim',       cmd = { 'Vista' } },
+        --{ 'johnsonlee-debug/a.vim',     ft = 'cpp' },
         { 'cdelledonne/vim-cmake',      ft = 'cmake' },
         { 'lervag/vimtex',              ft = 'tex' },
-        { 'klafyvel/vim-slime-cells',   ft = { 'ocaml', 'haskell', 'python' } },
-        { 'rust-lang/rust.vim',         ft = 'rust' },
+        --{ 'klafyvel/vim-slime-cells',   ft = { 'ocaml', 'haskell', 'python' } },
+        --{ 'rust-lang/rust.vim',         ft = 'rust' },
         --{'numirias/semshi', ft = 'python', build = vim.fn[':UpdateRemotePlugins']},
         --{ 'python-mode/python-mode',    ft = 'python',                        branch = 'develop' },
         { 'jmcantrell/vim-virtualenv',  ft = 'python' },
