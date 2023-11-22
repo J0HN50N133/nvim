@@ -3,7 +3,7 @@ vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
 
 require("nvim-tree").setup({
-        sync_root_with_cwd = true,
+        sync_root_with_cwd = false,
         respect_buf_cwd = true,
         update_focused_file = {
                 enable = true,

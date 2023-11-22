@@ -72,29 +72,6 @@
                                 "bsconfig.json"
                         ]
                 }
-                //,
-                //"ccls": {
-                        //"command": "ccls",
-                        //"filetypes": [
-                                //"c",
-                                //"cpp",
-                                //"cuda",
-                                //"objc",
-                                //"objcpp"
-                        //],
-                        //"rootPatterns": [
-                                //".ccls-root",
-                                //"compile_commands.json"
-                        //],
-                        //"initializationOptions": {
-                                //"cache": {
-                                        //"directory": ".ccls-cache"
-                                //},
-                                //"client": {
-                                        //"snippetSupport": true
-                                //}
-                        //}
-                //}
         },
         "workspace.rootPatterns": [
                 ".git",
@@ -105,4 +82,5 @@
         "python.pythonPath": "python3",
         "git.enableGutters": true,
         "sumneko-lua.enableNvimLuaDev": true,
+        "snippets.ultisnips.pythonPrompt": false,
 }
