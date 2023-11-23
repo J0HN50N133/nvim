@@ -1,8 +1,3 @@
-local opt = vim.opt
-opt.foldmethod = 'expr'
-opt.foldexpr = 'nvim_treesitter#foldexpr()'
-opt.foldenable = false
-
 require 'nvim-treesitter.configs'.setup {
         -- A list of parser names, or "all"
         ensure_installed = { "c", "cpp", "cmake" },
