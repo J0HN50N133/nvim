@@ -3,6 +3,8 @@ local cmd      = vim.cmd
 local fn       = vim.fn
 local au       = vim.api.nvim_create_autocmd
 
+o.foldmethod = 'syntax'
+o.foldenable = false
 o.hidden       = true
 o.updatetime   = 300
 o.conceallevel = 3
