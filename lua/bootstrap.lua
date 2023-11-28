@@ -1,6 +1,6 @@
 local uv = vim.uv
 local bin_path = vim.fn.stdpath('data') .. '/bin'
-local ghproxy = (function(need_proxy) if need_proxy then return 'https://ghproxy.com/' else return '' end end)(true)
+local ghproxy = (function(need_proxy) if need_proxy then return 'https://mirror.ghproxy.com/' else return '' end end)(true)
 local fmt = string.format
 vim.fn.setenv("PATH", bin_path .. ":" .. vim.fn.getenv("PATH"))
 
