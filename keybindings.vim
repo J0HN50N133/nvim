@@ -81,12 +81,6 @@ endfunc
 "                      "
 """"""""""""""""""""""""
 
-"nmap <F2> :Vista!!<CR>
-nnoremap <silent><M-\|> :Vista finder<CR>
-nnoremap <silent><M-\> :BTags<CR>
-inoremap <silent><M-\> <C-O>:BTags<CR>
-"nnoremap <silent><M-\> :Vista finder<CR>
-
 nmap <Leader>li  <plug>(vimtex-info)
 nmap <Leader>lt  <plug>(vimtex-toc-open)
 nmap <Leader>lT  <plug>(vimtex-toc-toggle)
