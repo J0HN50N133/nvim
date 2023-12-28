@@ -211,5 +211,6 @@ require('lazy').setup({
         { 'rescript-lang/vim-rescript', ft = 'rescript' },
         { 'folke/neodev.nvim' },
         { 'github/copilot.vim' },
+        {'wakatime/vim-wakatime'}
 })
 -- coc plug
