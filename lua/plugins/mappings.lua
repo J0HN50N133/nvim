@@ -13,9 +13,10 @@ return {
           -- this is useful for naming menus
           ["<Leader>b"] = { name = "Buffers" },
           -- quick save
-          ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+          ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
 
           -- windows switching
+          ["<M-=>"] = { ":ToggleTerm direction=horizontal<cr>" },
           ["<M-S-h>"] = { "<C-w>h" },
           ["<M-S-j>"] = { "<C-w>j" },
           ["<M-S-k>"] = { "<C-w>k" },
@@ -24,6 +25,12 @@ return {
         t = {
           -- setting a mapping to false will disable it
           -- ["<esc>"] = false,
+          ["<M-q>"] = { [[<C-\><C-n>]] },
+          ["<M-=>"] = { "<cmd>ToggleTerm direction=horizontal<cr>" },
+          ["<M-S-h>"] = { [[<C-\><C-n><C-w>h ]] },
+          ["<M-S-j>"] = { [[<C-\><C-n><C-w>j ]] },
+          ["<M-S-k>"] = { [[<C-\><C-n><C-w>k ]] },
+          ["<M-S-l>"] = { [[<C-\><C-n><C-w>l ]] },
         },
       },
     },
@@ -36,16 +43,12 @@ return {
         n = {
           -- this mapping will only be set in buffers with an LSP attached
           K = {
-            function()
-              vim.lsp.buf.hover()
-            end,
+            function() vim.lsp.buf.hover() end,
             desc = "Hover symbol details",
           },
           -- condition for only server with declaration capabilities
           gD = {
-            function()
-              vim.lsp.buf.declaration()
-            end,
+            function() vim.lsp.buf.declaration() end,
             desc = "Declaration of current symbol",
             cond = "textDocument/declaration",
           },
