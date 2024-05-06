@@ -10,6 +10,7 @@ return {
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.cmake" },
+  { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.project.project-nvim" },
   -- import/override with your plugins folder
 }
