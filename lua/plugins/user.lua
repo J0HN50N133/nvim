@@ -17,6 +17,14 @@ return {
     config = function() require("leap").create_default_mappings() end,
   },
 
+  {
+    "mikavilpas/yazi.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    event = "VeryLazy",
+  },
+
   -- == Examples of Overriding Plugins ==
 
   -- customize alpha options

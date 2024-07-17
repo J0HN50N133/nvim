@@ -21,6 +21,16 @@ return {
           ["<M-S-j>"] = { "<C-w>j" },
           ["<M-S-k>"] = { "<C-w>k" },
           ["<M-S-l>"] = { "<C-w>l" },
+
+          -- yazi
+          ["<Leader>ty"] = {
+            function() require("yazi").yazi() end,
+            desc = "Open Yazi file manager",
+          },
+          ["<Leader>tY"] = {
+            function() require("yazi").yazi(nil, vim.fn.getcwd()) end,
+            desc = "Open Yazi file manager in working directory",
+          },
         },
         t = {
           -- setting a mapping to false will disable it

@@ -16,6 +16,7 @@ return {
         "taplo",
         "typst_lsp",
         "tsserver",
+        "eslint",
         -- add more arguments for adding more language servers
       })
     end,
