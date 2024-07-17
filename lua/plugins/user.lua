@@ -6,15 +6,22 @@ return {
 
   -- == Examples of Adding Plugins ==
 
-  {
-    "kylechui/nvim-surround",
-    event = "VeryLazy",
-    config = function() require("nvim-surround").setup {} end,
-  },
+  -- {
+  --   "kylechui/nvim-surround",
+  --   event = "VeryLazy",
+  --   cond = true,
+  --   config = function() require("nvim-surround").setup {} end,
+  -- },
+  --
+  { "echasnovski/mini.surround", version = false, config = function() require("mini.surround").setup() end },
 
   {
     "ggandor/leap.nvim",
-    config = function() require("leap").create_default_mappings() end,
+    config = function()
+      vim.keymap.set({ "n", "x", "o" }, "f", "<Plug>(leap-forward)")
+      vim.keymap.set({ "n", "x", "o" }, "F", "<Plug>(leap-backward)")
+      vim.keymap.set({ "n", "x", "o" }, "gf", "<Plug>(leap-from-window)")
+    end,
   },
 
   {

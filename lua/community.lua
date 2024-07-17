@@ -12,5 +12,6 @@ return {
   { import = "astrocommunity.pack.cmake" },
   { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.project.project-nvim" },
+  { import = "astrocommunity.recipes.vscode" },
   -- import/override with your plugins folder
 }
